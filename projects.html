@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Projects | Rapid Laser</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Rapid Laser Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="logo-text" style="display: none;">
+                        <span class="logo-rapid">RAPID</span>
+                        <span class="logo-laser">LASER</span>
+                    </div>
+                </a>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                    <li><a href="projects.html" class="active">Custom Projects</a></li>
+                    <li><a href="capabilities.html">Capabilities</a></li>
+                    <li><a href="quote.html" class="btn-nav">Request A Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Custom Projects</h1>
+            <p>Bringing your unique ideas to life with precision and expertise</p>
+        </div>
+    </section>
+
+    <!-- Projects Intro -->
+    <section class="projects-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Custom Fabrication Solutions</h2>
+                <p>At Rapid Laser, we specialize in turning your concepts into reality. Whether you need a one-off prototype or a custom production run, our team has the expertise and equipment to deliver exceptional results.</p>
+                <p>We work closely with clients across various industries to design, develop, and manufacture custom sheet metal projects. From initial concept to final delivery, we're committed to exceeding your expectations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="project-categories">
+        <div class="container">
+            <h2 class="section-title">Project Types</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/industrial.jpg" alt="Industrial Projects" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                    </div>
+                    <div class="category-content">
+                        <h3>Industrial Components</h3>
+                        <p>Custom machinery parts, enclosures, brackets, and structural components for industrial applications.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/architectural.jpg" alt="Architectural Projects" onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=600&h=400&fit=crop'">
+                    </div>
+                    <div class="category-content">
+                        <h3>Architectural Metalwork</h3>
+                        <p>Decorative screens, panels, railings, and custom architectural features in various finishes.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/prototypes.jpg" alt="Prototypes" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=600&h=400&fit=crop'">
+                    </div>
+                    <div class="category-content">
+                        <h3>Prototypes</h3>
+                        <p>Rapid prototyping services for testing and development before full production runs.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/enclosures.jpg" alt="Enclosures" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&h=400&fit=crop'">
+                    </div>
+                    <div class="category-content">
+                        <h3>Enclosures & Cabinets</h3>
+                        <p>Custom electrical enclosures, control cabinets, and protective housings.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/signage.jpg" alt="Signage" onerror="this.src='https://images.unsplash.com/photo-1581092795462-4c7b1e36f856?w=600&h=400&fit=crop'">
+                    </div>
+                    <div class="category-content">
+                        <h3>Signage & Display</h3>
+                        <p>Laser-cut signs, display stands, and promotional items in metal.</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="images/custom-parts.jpg" alt="Custom Parts" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                    </div>
+                    <div class="category-content">
+                        <h3>Custom Parts</h3>
+                        <p>Specialized components designed and manufactured to your exact specifications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2 class="section-title">Our Project Process</h2>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Consultation</h3>
+                        <p>We discuss your project requirements, specifications, and goals to fully understand your needs.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Design & Planning</h3>
+                        <p>Our team creates detailed CAD drawings and plans, optimizing for manufacturability and cost.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Approval & Quote</h3>
+                        <p>We provide a detailed quote and timeline, making any necessary revisions before proceeding.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Manufacturing</h3>
+                        <p>Your project is manufactured using our state-of-the-art equipment with quality checks throughout.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Quality Control</h3>
+                        <p>Final inspection ensures every detail meets our high standards and your specifications.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3>Delivery</h3>
+                        <p>Completed project is carefully packaged and delivered on schedule.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section">
+        <div class="container">
+            <h2 class="section-title">Industries We Serve</h2>
+            <div class="industries-grid">
+                <div class="industry-item">
+                    <h3>Manufacturing</h3>
+                    <p>Custom components and assemblies</p>
+                </div>
+                <div class="industry-item">
+                    <h3>Construction</h3>
+                    <p>Structural and architectural metalwork</p>
+                </div>
+                <div class="industry-item">
+                    <h3>Engineering</h3>
+                    <p>Precision parts and prototypes</p>
+                </div>
+                <div class="industry-item">
+                    <h3>Technology</h3>
+                    <p>Enclosures and specialized housings</p>
+                </div>
+                <div class="industry-item">
+                    <h3>Retail</h3>
+                    <p>Display fixtures and signage</p>
+                </div>
+                <div class="industry-item">
+                    <h3>Agriculture</h3>
+                    <p>Equipment parts and modifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have a Custom Project in Mind?</h2>
+                <p>Let's discuss how we can bring your vision to life with precision and quality</p>
+                <div class="cta-buttons">
+                    <a href="quote.html" class="btn btn-primary">Request a Quote</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Rapid Machining & Fabrication</h4>
+                    <p>Quality engineering and fabrication since 1986</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="capabilities.html">Capabilities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#laser-cutting">Laser Cutting</a></li>
+                        <li><a href="services.html#fabrication">Sheet Metal Fabrication</a></li>
+                        <li><a href="capabilities.html">Materials We Cut</a></li>
+                        <li><a href="quote.html">Request a Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>5 Elsum Ave, Bayswater North<br>Victoria, 3153</p>
+                    <p><strong>Phone:</strong> 03 9729 3344</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2024 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

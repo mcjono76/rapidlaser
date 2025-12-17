@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laser Cutting in Bayswater, Melbourne | Rapid Laser</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Rapid Laser Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="logo-text" style="display: none;">
+                        <span class="logo-rapid">RAPID</span>
+                        <span class="logo-laser">LASER</span>
+                    </div>
+                </a>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                    <li><a href="projects.html">Custom Projects</a></li>
+                    <li><a href="capabilities.html">Capabilities</a></li>
+                    <li><a href="quote.html" class="btn-nav">Request A Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slider -->
+    <section class="hero">
+        <div class="slider">
+            <div class="slide active">
+                <img src="images/slide1.jpg" alt="Laser Cutting" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1920&h=800&fit=crop'">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide">
+                <img src="images/slide2.jpg" alt="Metal Fabrication" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=800&fit=crop'">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide">
+                <img src="images/slide3.jpg" alt="Manufacturing" onerror="this.src='https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&h=800&fit=crop'">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide">
+                <img src="images/slide4.jpg" alt="CNC Machinery" onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=1920&h=800&fit=crop'">
+                <div class="slide-overlay"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title">Laser Cutting & More in Bayswater, Melbourne</h1>
+                <p class="hero-subtitle">Precision engineering and fabrication solutions since 1986</p>
+                <div class="hero-buttons">
+                    <a href="quote.html" class="btn btn-primary">Get A Quote</a>
+                    <a href="services.html" class="btn btn-secondary">Our Services</a>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+            <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/facility.jpg" alt="Laser Cutting Facility" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                </div>
+                <div class="about-text">
+                    <h2>About Rapid Laser</h2>
+                    <p>Rapid Laser is a division of Rapid Machining and sheet metal Fabrication. From small beginnings in 1986 Rapid Machining has continually developed and is now a well respected one-stop engineering business.</p>
+                    <p>We have built our business by following a few basic rules:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            Meeting and exceeding customers expectations
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            Accuracy and quality of our work
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            Excellent customer service
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            Knowledge of our products and the industry
+                        </li>
+                        <li>
+                            <span class="feature-icon">✓</span>
+                            Expertise in the Design & development of our customers' products
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                        </svg>
+                    </div>
+                    <h3>Design</h3>
+                    <p>Transforming customers' ideas and concepts into reality</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3>Drafting</h3>
+                    <p>Professional CAD drafting for customers' designs</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Complete manufacture of customers' products</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3>Laser Cutting</h3>
+                    <p>Precision laser cutting services up to 20mm thickness</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                    </div>
+                    <h3>Sheet Metal Fabrication</h3>
+                    <p>Medium engineering and custom sheet metal work</p>
+                </div>
+            </div>
+            <div class="cta-center">
+                <a href="services.html" class="btn btn-primary">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section class="capabilities">
+        <div class="container">
+            <h2 class="section-title">Our Capabilities</h2>
+            <div class="capabilities-grid">
+                <div class="capability-item">
+                    <h3>CAD Drafting</h3>
+                    <p>Advanced computer-aided design services</p>
+                </div>
+                <div class="capability-item">
+                    <h3>Laser Cutting to 20mm</h3>
+                    <p>Precision cutting for various thicknesses</p>
+                </div>
+                <div class="capability-item">
+                    <h3>CNC Folding</h3>
+                    <p>Automated precision folding</p>
+                </div>
+                <div class="capability-item">
+                    <h3>Rolling</h3>
+                    <p>Professional metal rolling services</p>
+                </div>
+                <div class="capability-item">
+                    <h3>Lifting</h3>
+                    <p>Heavy lifting capabilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Contact us today to discuss your laser cutting and fabrication needs</p>
+                <div class="cta-buttons">
+                    <a href="quote.html" class="btn btn-primary">Request a Quote</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Rapid Machining & Fabrication</h4>
+                    <p>Quality engineering and fabrication since 1986</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="capabilities.html">Capabilities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#laser-cutting">Laser Cutting</a></li>
+                        <li><a href="services.html#fabrication">Sheet Metal Fabrication</a></li>
+                        <li><a href="capabilities.html">Materials We Cut</a></li>
+                        <li><a href="quote.html">Request a Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>5 Elsum Ave, Bayswater North<br>Victoria, 3153</p>
+                    <p><strong>Phone:</strong> 03 9729 3344</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2024 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

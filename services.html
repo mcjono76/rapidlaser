@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Rapid Laser</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Rapid Laser Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="logo-text" style="display: none;">
+                        <span class="logo-rapid">RAPID</span>
+                        <span class="logo-laser">LASER</span>
+                    </div>
+                </a>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Our Services</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                    <li><a href="projects.html">Custom Projects</a></li>
+                    <li><a href="capabilities.html">Capabilities</a></li>
+                    <li><a href="quote.html" class="btn-nav">Request A Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive laser cutting and fabrication solutions</p>
+        </div>
+    </section>
+
+    <!-- Services Detail Section -->
+    <section class="services-detail">
+        <div class="container">
+            <div class="service-detail-card" id="design">
+                <div class="service-detail-content">
+                    <div class="service-detail-text">
+                        <h2>Design Services</h2>
+                        <p>At Rapid Laser, we specialize in transforming your ideas and concepts into practical, manufacturable designs. Our experienced design team works closely with you to understand your vision and requirements.</p>
+                        <ul class="detail-list">
+                            <li>Concept development and refinement</li>
+                            <li>3D modeling and visualization</li>
+                            <li>Design optimization for manufacturing</li>
+                            <li>Prototyping and testing support</li>
+                            <li>Collaborative design process</li>
+                        </ul>
+                    </div>
+                    <div class="service-detail-image">
+                        <img src="images/design.jpg" alt="Design Services" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-detail-card reverse" id="drafting">
+                <div class="service-detail-content">
+                    <div class="service-detail-text">
+                        <h2>CAD Drafting</h2>
+                        <p>Our professional CAD drafting services provide detailed technical drawings for your designs. We use the latest CAD software to ensure precision and accuracy in every project.</p>
+                        <ul class="detail-list">
+                            <li>Detailed technical drawings</li>
+                            <li>2D and 3D CAD modeling</li>
+                            <li>Assembly drawings and exploded views</li>
+                            <li>Material specifications</li>
+                            <li>Manufacturing-ready documentation</li>
+                        </ul>
+                    </div>
+                    <div class="service-detail-image">
+                        <img src="images/drafting.jpg" alt="CAD Drafting" onerror="this.src='https://images.unsplash.com/photo-1581092583537-20d51876f4c3?w=600&h=400&fit=crop'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-detail-card" id="manufacturing">
+                <div class="service-detail-content">
+                    <div class="service-detail-text">
+                        <h2>Manufacturing</h2>
+                        <p>We manufacture customers' products with precision and quality. From small batches to large production runs, we have the capabilities to meet your manufacturing needs.</p>
+                        <ul class="detail-list">
+                            <li>Precision manufacturing processes</li>
+                            <li>Quality control and inspection</li>
+                            <li>Small to medium batch production</li>
+                            <li>Assembly and finishing services</li>
+                            <li>Timely delivery and project management</li>
+                        </ul>
+                    </div>
+                    <div class="service-detail-image">
+                        <img src="images/manufacturing.jpg" alt="Manufacturing" onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=600&h=400&fit=crop'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-detail-card reverse" id="laser-cutting">
+                <div class="service-detail-content">
+                    <div class="service-detail-text">
+                        <h2>Laser Cutting</h2>
+                        <p>We provide precision laser cutting services for customers across a wide variety of thicknesses and products. Our state-of-the-art laser cutting equipment ensures accurate cuts every time.</p>
+                        <ul class="detail-list">
+                            <li>Cutting up to 20mm thickness</li>
+                            <li>Various materials: steel, stainless steel, aluminum</li>
+                            <li>Complex shapes and patterns</li>
+                            <li>Fast turnaround times</li>
+                            <li>Precision and repeatability</li>
+                            <li>Integration with our fabrication services</li>
+                        </ul>
+                    </div>
+                    <div class="service-detail-image">
+                        <img src="images/laser-cutting.jpg" alt="Laser Cutting" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&h=400&fit=crop'">
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-detail-card" id="fabrication">
+                <div class="service-detail-content">
+                    <div class="service-detail-text">
+                        <h2>Sheet Metal Fabrication</h2>
+                        <p>Our sheet metal fabrication services cover medium engineering projects. We laser cut all the steel for our custom made sheet metal fabrication projects in Bayswater.</p>
+                        <ul class="detail-list">
+                            <li>Custom sheet metal work</li>
+                            <li>CNC folding and bending</li>
+                            <li>Welding and assembly</li>
+                            <li>Surface finishing</li>
+                            <li>Powder coating preparation</li>
+                            <li>Quality assurance</li>
+                        </ul>
+                    </div>
+                    <div class="service-detail-image">
+                        <img src="images/fabrication.jpg" alt="Sheet Metal Fabrication" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">Why Choose Rapid Laser?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🎯</div>
+                    <h3>Meeting Expectations</h3>
+                    <p>We consistently meet and exceed customer expectations with our commitment to quality</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">✓</div>
+                    <h3>Accuracy & Quality</h3>
+                    <p>Precision and quality are at the core of everything we do</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💬</div>
+                    <h3>Customer Service</h3>
+                    <p>Excellent customer service ensures a smooth experience from start to finish</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📚</div>
+                    <h3>Industry Knowledge</h3>
+                    <p>Deep knowledge of our products and the engineering industry</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🔧</div>
+                    <h3>Design Expertise</h3>
+                    <p>Expert design and development support for your products</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">⏱️</div>
+                    <h3>Since 1986</h3>
+                    <p>Over 35 years of experience in engineering and fabrication</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Let's Discuss Your Project</h2>
+                <p>Contact us to learn how we can provide customized solutions for your specific needs</p>
+                <div class="cta-buttons">
+                    <a href="quote.html" class="btn btn-primary">Request a Quote</a>
+                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Rapid Machining & Fabrication</h4>
+                    <p>Quality engineering and fabrication since 1986</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="capabilities.html">Capabilities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#laser-cutting">Laser Cutting</a></li>
+                        <li><a href="services.html#fabrication">Sheet Metal Fabrication</a></li>
+                        <li><a href="capabilities.html">Materials We Cut</a></li>
+                        <li><a href="quote.html">Request a Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>5 Elsum Ave, Bayswater North<br>Victoria, 3153</p>
+                    <p><strong>Phone:</strong> 03 9729 3344</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2024 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

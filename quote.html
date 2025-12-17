@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request A Quote | Rapid Laser</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.png" alt="Rapid Laser Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="logo-text" style="display: none;">
+                        <span class="logo-rapid">RAPID</span>
+                        <span class="logo-laser">LASER</span>
+                    </div>
+                </a>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="equipment.html">Equipment</a></li>
+                    <li><a href="projects.html">Custom Projects</a></li>
+                    <li><a href="capabilities.html">Capabilities</a></li>
+                    <li><a href="quote.html" class="btn-nav active">Request A Quote</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Request A Quote</h1>
+            <p>Get a detailed quote for your laser cutting and fabrication project</p>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="quote-form-section">
+        <div class="container">
+            <div class="quote-layout">
+                <div class="quote-info">
+                    <h2>Get Started</h2>
+                    <p>Fill out the form with details about your project, and we'll get back to you with a competitive quote. The more information you provide, the more accurate our quote will be.</p>
+                    
+                    <div class="quote-benefits">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">⚡</span>
+                            <div>
+                                <h3>Fast Response</h3>
+                                <p>We typically respond within 24 hours</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">💰</span>
+                            <div>
+                                <h3>Competitive Pricing</h3>
+                                <p>Quality work at fair prices</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">🎯</span>
+                            <div>
+                                <h3>Accurate Estimates</h3>
+                                <p>Detailed breakdown of costs</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">💬</span>
+                            <div>
+                                <h3>Expert Advice</h3>
+                                <p>Guidance on materials and processes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quote-contact">
+                        <h3>Prefer to Call?</h3>
+                        <p>Phone: <strong>03 9729 3344</strong></p>
+                        <p>We're here to answer your questions</p>
+                    </div>
+                </div>
+
+                <div class="quote-form-container">
+                    <form class="quote-form" id="quoteForm" onsubmit="handleQuoteSubmit(event)">
+                        <div class="form-section">
+                            <h3>Contact Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company Name</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3>Project Details</h3>
+                            <div class="form-group">
+                                <label for="service">Service Required *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service...</option>
+                                    <option value="laser-cutting">Laser Cutting</option>
+                                    <option value="fabrication">Sheet Metal Fabrication</option>
+                                    <option value="design">Design Services</option>
+                                    <option value="drafting">CAD Drafting</option>
+                                    <option value="manufacturing">Manufacturing</option>
+                                    <option value="custom">Custom Project</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="material">Material</label>
+                                    <select id="material" name="material">
+                                        <option value="">Select material...</option>
+                                        <option value="mild-steel">Mild Steel</option>
+                                        <option value="stainless-steel">Stainless Steel</option>
+                                        <option value="aluminum">Aluminum</option>
+                                        <option value="galvanized">Galvanized Steel</option>
+                                        <option value="other">Other</option>
+                                        <option value="not-sure">Not Sure</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="thickness">Material Thickness (mm)</label>
+                                    <input type="text" id="thickness" name="thickness" placeholder="e.g. 3mm">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity">Quantity Required</label>
+                                <input type="text" id="quantity" name="quantity" placeholder="e.g. 10 pieces">
+                            </div>
+                            <div class="form-group">
+                                <label for="timeline">Project Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="">Select timeline...</option>
+                                    <option value="urgent">Urgent (1-2 weeks)</option>
+                                    <option value="standard">Standard (3-4 weeks)</option>
+                                    <option value="flexible">Flexible (4+ weeks)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="description">Project Description *</label>
+                                <textarea id="description" name="description" rows="5" required placeholder="Please provide details about your project, including dimensions, specifications, and any special requirements..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="files">Attach Files (CAD drawings, sketches, etc.)</label>
+                                <input type="file" id="files" name="files" multiple accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png,.step,.stp">
+                                <small>Accepted formats: PDF, DWG, DXF, JPG, PNG, STEP (Max 10MB per file)</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter">
+                                <span>I'd like to receive updates about services and special offers</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Submit Quote Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose-mini">
+        <div class="container">
+            <h2>Why Choose Rapid Laser?</h2>
+            <div class="mini-grid">
+                <div class="mini-card">
+                    <h3>35+ Years Experience</h3>
+                    <p>Established since 1986</p>
+                </div>
+                <div class="mini-card">
+                    <h3>Quality Guarantee</h3>
+                    <p>Accuracy and precision</p>
+                </div>
+                <div class="mini-card">
+                    <h3>Modern Equipment</h3>
+                    <p>Latest laser technology</p>
+                </div>
+                <div class="mini-card">
+                    <h3>Expert Team</h3>
+                    <p>Skilled professionals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Rapid Machining & Fabrication</h4>
+                    <p>Quality engineering and fabrication since 1986</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="capabilities.html">Capabilities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html#laser-cutting">Laser Cutting</a></li>
+                        <li><a href="services.html#fabrication">Sheet Metal Fabrication</a></li>
+                        <li><a href="capabilities.html">Materials We Cut</a></li>
+                        <li><a href="quote.html">Request a Quote</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>5 Elsum Ave, Bayswater North<br>Victoria, 3153</p>
+                    <p><strong>Phone:</strong> 03 9729 3344</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Copyright 2024 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
