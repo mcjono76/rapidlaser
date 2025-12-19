@@ -1143,14 +1143,17 @@ section {
 
 .standards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    max-width: 1400px;
+    margin: 2rem auto 0;
 }
 
 .standard-item {
     background: var(--bg-light);
     padding: 2rem;
     border-radius: var(--border-radius);
+    text-align: center;
 }
 
 .standard-item h3 {
@@ -1556,6 +1559,11 @@ section {
         gap: 1rem;
     }
 
+    .standards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
 }
 
 @media (max-width: 640px) {
@@ -1600,6 +1608,11 @@ section {
     }
 
     .capabilities-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .standards-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
