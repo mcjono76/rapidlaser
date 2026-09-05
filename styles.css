@@ -4118,9 +4118,7 @@ body.home .navbar {
 /* Capabilities intro */
 .capabilities-intro {
     position: relative;
-    background-color: #ffffff;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px);
-    background-size: 18px 18px;
+    background: #ffffff;
     padding: var(--section-padding) 0;
     overflow: hidden;
     text-align: left;
@@ -4169,9 +4167,9 @@ body.home .navbar {
 
 .capabilities-intro__proof li {
     display: flex;
-    gap: 1.25rem;
+    gap: 1.125rem;
     align-items: center;
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.75rem;
 }
 
 .capabilities-intro__proof li:last-child {
@@ -4180,8 +4178,8 @@ body.home .navbar {
 
 .capabilities-intro__icon {
     flex-shrink: 0;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: rgba(1, 104, 233, 0.1);
     display: flex;
@@ -4191,8 +4189,10 @@ body.home .navbar {
 }
 
 .capabilities-intro__icon svg {
-    width: 22px;
-    height: 22px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: var(--primary-color);
 }
 
 .capabilities-intro__proof strong {
@@ -4204,7 +4204,7 @@ body.home .navbar {
     line-height: 1.3;
 }
 
-.capabilities-intro__proof span {
+.capabilities-intro__proof li > div span {
     display: block;
     font-size: 0.8125rem;
     color: #6b7280;
