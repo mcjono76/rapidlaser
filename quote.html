@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-quote">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -21,7 +21,7 @@
                         <span class="logo-laser">LASER</span>
                     </div>
                 </a>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -33,206 +33,310 @@
                     <li><a href="projects.html">Custom Projects</a></li>
                     <li><a href="capabilities.html">Capabilities</a></li>
                     <li><a href="quote.html" class="btn-nav active">Request A Quote</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Request A Quote</h1>
-            <p>Get a detailed quote for your laser cutting and fabrication project</p>
+    <!-- Hero -->
+    <section class="page-hero" aria-label="Request a quote hero">
+        <div class="page-hero__media">
+            <img src="images/lasercutting.jpg" alt="Laser cutting machine with sparks" onerror="this.src='images/laser-cutting.jpg'">
+            <div class="page-hero__overlay"></div>
         </div>
+        <div class="page-hero__content">
+            <div class="container">
+                <p class="eyebrow eyebrow--light">Request A Quote</p>
+                <h1 class="page-hero__title">
+                    Let's Turn Your<br>
+                    <span class="text-accent">Ideas Into Reality.</span>
+                </h1>
+                <p class="page-hero__subtitle">Get a tailored quote for your metal fabrication project. Simply fill out the form below and our team will be in touch to discuss your requirements.</p>
+            </div>
+        </div>
+        <p class="page-hero__script" aria-hidden="true">Precision<br>starts with<br>a conversation</p>
     </section>
 
     <!-- Quote Form Section -->
-    <section class="quote-form-section">
+    <section class="quote-v2-section" aria-label="Quote request form">
         <div class="container">
-            <div class="quote-layout">
-                <div class="quote-info">
-                    <h2>Get Started</h2>
-                    <p>Fill out the form with details about your project, and we'll get back to you with a competitive quote. The more information you provide, the more accurate our quote will be.</p>
-                    
-                    <div class="quote-benefits">
-                        <div class="benefit-item">
-                            <span class="benefit-icon">⚡</span>
-                            <div>
-                                <h3>Fast Response</h3>
-                                <p>We typically respond within 24 hours</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-icon">💰</span>
-                            <div>
-                                <h3>Competitive Pricing</h3>
-                                <p>Quality work at fair prices</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-icon">🎯</span>
-                            <div>
-                                <h3>Accurate Estimates</h3>
-                                <p>Detailed breakdown of costs</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-icon">💬</span>
-                            <div>
-                                <h3>Expert Advice</h3>
-                                <p>Guidance on materials and processes</p>
-                            </div>
-                        </div>
+            <div class="quote-v2-layout">
+                <div class="quote-v2-form-wrap">
+                    <div class="quote-v2-form__header">
+                        <p class="eyebrow">Get A Quote</p>
+                        <h2 class="section-heading">Tell Us About Your Project</h2>
+                        <p>Provide as much detail as possible and we'll get back to you with a competitive quote and timeframe.</p>
                     </div>
 
-                    <div class="quote-contact">
-                        <h3>Prefer to Call?</h3>
-                        <p>Phone: <strong>03 9729 3344</strong></p>
-                        <p>We're here to answer your questions</p>
-                    </div>
-                </div>
-
-                <div class="quote-form-container">
-                    <form class="quote-form" id="quoteForm" onsubmit="handleQuoteSubmit(event)">
-                        <div class="form-section">
-                            <h3>Contact Information</h3>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">First Name *</label>
-                                    <input type="text" id="firstName" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Last Name *</label>
-                                    <input type="text" id="lastName" name="lastName" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" required>
-                                </div>
+                    <form class="quote-v2-form" id="quoteForm" onsubmit="handleQuoteSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Your name" required autocomplete="name">
                             </div>
                             <div class="form-group">
                                 <label for="company">Company Name</label>
-                                <input type="text" id="company" name="company">
+                                <input type="text" id="company" name="company" placeholder="Your company (optional)" autocomplete="organization">
                             </div>
                         </div>
 
-                        <div class="form-section">
-                            <h3>Project Details</h3>
+                        <div class="form-row">
                             <div class="form-group">
-                                <label for="service">Service Required *</label>
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="you@company.com" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Your phone number" required autocomplete="tel">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="service">Project Type *</label>
                                 <select id="service" name="service" required>
-                                    <option value="">Select a service...</option>
+                                    <option value="">Select project type...</option>
                                     <option value="laser-cutting">Laser Cutting</option>
+                                    <option value="cnc-folding">CNC Folding</option>
                                     <option value="fabrication">Sheet Metal Fabrication</option>
-                                    <option value="design">Design Services</option>
-                                    <option value="drafting">CAD Drafting</option>
-                                    <option value="manufacturing">Manufacturing</option>
-                                    <option value="custom">Custom Project</option>
+                                    <option value="drafting">CAD &amp; Drafting</option>
+                                    <option value="rolling-forming">Rolling &amp; Forming</option>
+                                    <option value="custom">Custom Manufacturing</option>
                                     <option value="other">Other</option>
                                 </select>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="material">Material</label>
-                                    <select id="material" name="material">
-                                        <option value="">Select material...</option>
-                                        <option value="mild-steel">Mild Steel</option>
-                                        <option value="stainless-steel">Stainless Steel</option>
-                                        <option value="aluminum">Aluminum</option>
-                                        <option value="galvanized">Galvanized Steel</option>
-                                        <option value="other">Other</option>
-                                        <option value="not-sure">Not Sure</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="thickness">Material Thickness (mm)</label>
-                                    <input type="text" id="thickness" name="thickness" placeholder="e.g. 3mm">
-                                </div>
-                            </div>
                             <div class="form-group">
-                                <label for="quantity">Quantity Required</label>
-                                <input type="text" id="quantity" name="quantity" placeholder="e.g. 10 pieces">
-                            </div>
-                            <div class="form-group">
-                                <label for="timeline">Project Timeline</label>
-                                <select id="timeline" name="timeline">
-                                    <option value="">Select timeline...</option>
-                                    <option value="urgent">Urgent (1-2 weeks)</option>
-                                    <option value="standard">Standard (3-4 weeks)</option>
-                                    <option value="flexible">Flexible (4+ weeks)</option>
+                                <label for="material">Material(s) *</label>
+                                <select id="material" name="material" required>
+                                    <option value="">Select material...</option>
+                                    <option value="mild-steel">Mild Steel</option>
+                                    <option value="stainless-steel">Stainless Steel</option>
+                                    <option value="aluminum">Aluminium</option>
+                                    <option value="galvanized">Galvanized Steel</option>
+                                    <option value="other">Other / Not Sure</option>
                                 </select>
                             </div>
+                        </div>
+
+                        <div class="form-row">
                             <div class="form-group">
-                                <label for="description">Project Description *</label>
-                                <textarea id="description" name="description" rows="5" required placeholder="Please provide details about your project, including dimensions, specifications, and any special requirements..."></textarea>
+                                <label for="thickness">Estimated Thickness</label>
+                                <input type="text" id="thickness" name="thickness" placeholder="e.g. 5mm, 10mm, etc. (optional)">
                             </div>
                             <div class="form-group">
-                                <label for="files">Attach Files (CAD drawings, sketches, etc.)</label>
-                                <input type="file" id="files" name="files" multiple accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png,.step,.stp">
-                                <small>Accepted formats: PDF, DWG, DXF, JPG, PNG, STEP (Max 10MB per file)</small>
+                                <label for="quantity">Quantity / Volume</label>
+                                <input type="text" id="quantity" name="quantity" placeholder="e.g. 1 off, 1000+ (optional)">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" name="newsletter">
-                                <span>I'd like to receive updates about services and special offers</span>
-                            </label>
+                            <label for="description">Project Details *</label>
+                            <textarea id="description" name="description" rows="6" maxlength="1000" required placeholder="Tell us about your project, drawings, specifications, quantities, deadlines, or any other important details..."></textarea>
+                            <div class="quote-v2-form__counter" aria-live="polite">
+                                <span id="charCount">0</span>/1000
+                            </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-large">Submit Quote Request</button>
+                        <div class="form-group quote-upload">
+                            <span class="quote-upload__label">Attach Files (optional)</span>
+                            <div class="quote-upload__drop">
+                                <svg class="quote-upload__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                                </svg>
+                                <p class="quote-upload__text">Drawings, images, PDFs, etc.</p>
+                                <label for="files" class="quote-upload__btn">Choose Files</label>
+                                <input type="file" id="files" name="files" multiple accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png,.step,.stp" class="quote-upload__input">
+                            </div>
+                            <small class="quote-upload__hint">Accepted formats: PDF, DWG, DXF, JPG, PNG, STEP (Max 10MB per file)</small>
+                            <div class="file-list" id="fileList" aria-live="polite"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn--rect btn-large quote-v2-form__submit">
+                            Send Request
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                        </button>
+
+                        <p class="quote-v2-form__privacy">Your information will only be used to respond to your enquiry.</p>
                     </form>
                 </div>
+
+                <aside class="quote-v2-sidebar" aria-label="Why choose Rapid Laser">
+                    <div class="quote-v2-trust">
+                        <p class="eyebrow">Why Choose Rapid Laser?</p>
+                        <h2 class="quote-v2-sidebar__heading">Reliable. Precise. On Time.</h2>
+                        <ul class="quote-v2-trust__list">
+                            <li>
+                                <span class="quote-v2-trust__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Quality Manufacturing</strong>
+                                    <span>Precision cutting, folding and fabrication for superior results.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="quote-v2-trust__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Advanced Equipment</strong>
+                                    <span>Modern technology for accuracy, speed and consistency.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="quote-v2-trust__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Experienced Team</strong>
+                                    <span>Skilled operators with decades of industry experience.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="quote-v2-trust__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                                </span>
+                                <div>
+                                    <strong>End-to-End Support</strong>
+                                    <span>From initial enquiry through to final delivery.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="quote-v2-contact">
+                        <p class="eyebrow">Get In Touch</p>
+                        <h3>Prefer to speak with our team?</h3>
+                        <p class="quote-v2-contact__intro">Call us directly or send us an email and we'll be happy to help.</p>
+                        <ul class="quote-v2-contact__list">
+                            <li>
+                                <span class="quote-v2-contact__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Phone</strong>
+                                    <a href="tel:0397293344">03 9729 3344</a>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="quote-v2-contact__icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                </span>
+                                <div>
+                                    <strong>Address</strong>
+                                    <span>5 Elsum Ave, Bayswater North<br>Victoria, 3153</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="quote-v2-response">
+                        <span class="quote-v2-response__icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </span>
+                        <div>
+                            <strong>Fast Response</strong>
+                            <p>We aim to respond to enquiries as quickly as possible.</p>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Section -->
-    <section class="why-choose-mini">
+    <!-- Quote Process -->
+    <section class="quote-process" aria-label="Quote process">
         <div class="container">
-            <h2>Why Choose Rapid Laser?</h2>
-            <div class="mini-grid">
-                <div class="mini-card">
-                    <h3>35+ Years Experience</h3>
-                    <p>Established since 1986</p>
-                </div>
-                <div class="mini-card">
-                    <h3>Quality Guarantee</h3>
-                    <p>Accuracy and precision</p>
-                </div>
-                <div class="mini-card">
-                    <h3>Modern Equipment</h3>
-                    <p>Latest laser technology</p>
-                </div>
-                <div class="mini-card">
-                    <h3>Expert Team</h3>
-                    <p>Skilled professionals</p>
+            <div class="quote-process__header">
+                <p class="eyebrow">Our Process</p>
+                <h2 class="section-heading">From Quote to Delivery</h2>
+            </div>
+            <ol class="process-track">
+                <li class="process-track__step">
+                    <span class="process-track__num">01</span>
+                    <div class="process-track__content">
+                        <h3>Submit Enquiry</h3>
+                        <p>Tell us about your project</p>
+                    </div>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">02</span>
+                    <div class="process-track__content">
+                        <h3>Review &amp; Quote</h3>
+                        <p>We assess your requirements</p>
+                    </div>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">03</span>
+                    <div class="process-track__content">
+                        <h3>Confirm</h3>
+                        <p>Approve the quote and finalise details</p>
+                    </div>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">04</span>
+                    <div class="process-track__content">
+                        <h3>Manufacture</h3>
+                        <p>Precision production</p>
+                    </div>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">05</span>
+                    <div class="process-track__content">
+                        <h3>Deliver</h3>
+                        <p>Your finished project</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-v2 cta-v2--page cta-v2--quote">
+        <div class="cta-v2__media">
+            <img src="images/prototypes.jpg" alt="Close-up precision fabricated metal components" onerror="this.src='images/custom-parts.jpg'">
+            <div class="cta-v2__overlay"></div>
+        </div>
+        <div class="cta-v2__content">
+            <div class="container cta-v2__inner">
+                <p class="eyebrow eyebrow--light">Have a Complex Project?</p>
+                <h2>Talk to Our Experts</h2>
+                <p>Need more information or have a unique project in mind? Our team is here to help.</p>
+                <div class="cta-v2__actions">
+                    <a href="quote.html" class="btn btn-primary btn--rect">Request A Quote <span class="btn-arrow" aria-hidden="true">→</span></a>
+                    <a href="contact.html" class="btn btn-outline-light btn--rect">Contact Us</a>
                 </div>
             </div>
+        </div>
+        <div class="cta-v2__script-wrap" aria-hidden="true">
+            <span class="cta-v2__script-line"></span>
+            <p class="cta-v2__script">Custom solutions<br>for real results</p>
+            <span class="cta-v2__script-line"></span>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer footer-v2">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <h4>Rapid Machining & Fabrication</h4>
-                    <p>Quality engineering and fabrication since 1986</p>
+                <div class="footer-col footer-col--brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="" onerror="this.style.display='none';">
+                        <span class="footer-logo__text">
+                            <span class="logo-rapid">RAPID</span>
+                            <span class="logo-laser">LASER</span>
+                        </span>
+                    </a>
+                    <p>Quality engineering and fabrication since 1986.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Our Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="equipment.html">Equipment</a></li>
+                        <li><a href="projects.html">Custom Projects</a></li>
                         <li><a href="capabilities.html">Capabilities</a></li>
                     </ul>
                 </div>
@@ -248,11 +352,16 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <p>5 Elsum Ave, Bayswater North<br>Victoria, 3153</p>
-                    <p><strong>Phone:</strong> 03 9729 3344</p>
+                    <p><strong>Phone:</strong> <a href="tel:0397293344">03 9729 3344</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; Copyright 2025 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+                <p class="footer-bottom__copy">&copy; Copyright 2025 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+                <div class="footer-bottom__legal">
+                    <a href="#">Privacy Policy</a>
+                    <span class="footer-bottom__sep" aria-hidden="true">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -260,4 +369,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

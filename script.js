@@ -121,19 +121,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ========================================
 function handleQuoteSubmit(event) {
     event.preventDefault();
-    
+
+    const form = event.target;
+    const submitBtn = form.querySelector('[type="submit"]');
+    const defaultBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+    }
+
     // Get form data
-    const formData = new FormData(event.target);
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    
+
     // In a real application, you would send this data to a server
     console.log('Quote Request:', data);
-    
+
     // Show success message
-    alert('Thank you for your quote request! We will get back to you within 24 hours.');
-    
+    alert('Thank you for your quote request! We will respond to your enquiry as soon as possible.');
+
     // Reset form
-    event.target.reset();
+    form.reset();
+
+    const charCount = document.getElementById('charCount');
+    if (charCount) {
+        charCount.textContent = '0';
+    }
+
+    const fileList = document.getElementById('fileList');
+    if (fileList) {
+        fileList.innerHTML = '';
+    }
+
+    if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = defaultBtnHtml;
+    }
 }
 
 function handleContactSubmit(event) {
@@ -258,29 +282,36 @@ document.addEventListener('DOMContentLoaded', function() {
 // ========================================
 document.addEventListener('DOMContentLoaded', function() {
     const fileInput = document.getElementById('files');
-    
+    const fileList = document.getElementById('fileList');
+
     if (fileInput) {
         fileInput.addEventListener('change', function() {
             const files = Array.from(this.files);
-            
+            const target = fileList || this.parentNode.querySelector('.file-list');
+
+            if (!target) {
+                return;
+            }
+
             if (files.length > 0) {
                 const fileNames = files.map(f => f.name).join(', ');
-                
-                // Create or update file list display
-                let fileList = this.nextElementSibling?.nextElementSibling;
-                
-                if (!fileList || !fileList.classList.contains('file-list')) {
-                    fileList = document.createElement('div');
-                    fileList.classList.add('file-list');
-                    fileList.style.marginTop = '10px';
-                    fileList.style.fontSize = '0.9rem';
-                    fileList.style.color = '#7f8c8d';
-                    this.parentNode.appendChild(fileList);
-                }
-                
-                fileList.innerHTML = `<strong>Selected files:</strong> ${fileNames}`;
+                target.innerHTML = `<strong>Selected files:</strong> ${fileNames}`;
+            } else {
+                target.innerHTML = '';
             }
         });
+    }
+
+    const description = document.getElementById('description');
+    const charCount = document.getElementById('charCount');
+
+    if (description && charCount) {
+        const updateCount = () => {
+            charCount.textContent = String(description.value.length);
+        };
+
+        description.addEventListener('input', updateCount);
+        updateCount();
     }
 });
 
