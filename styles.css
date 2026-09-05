@@ -27,7 +27,7 @@
     --border-radius-sm: 8px;
     --transition: all 0.3s ease;
     --font-script: 'Dancing Script', cursive;
-    --section-padding: 5rem;
+    --section-padding: 3.5rem;
 }
 
 /* ========================================
@@ -307,7 +307,14 @@ ul {
    Sections
 ======================================== */
 section {
-    padding: 3rem 0;
+    padding: var(--section-padding) 0;
+}
+
+/* Full-bleed sections manage their own internal spacing */
+.hero-v2,
+.page-hero,
+.cta-v2 {
+    padding: 0;
 }
 
 .section-title {
@@ -596,7 +603,7 @@ section {
 .page-header {
     background: var(--gradient-primary);
     color: var(--text-white);
-    padding: 4rem 0;
+    padding: 3rem 0;
     text-align: center;
 }
 
@@ -724,7 +731,7 @@ section {
 .equipment-intro {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 4rem;
+    margin: 0 auto 3rem;
 }
 
 .equipment-intro h2 {
@@ -1011,7 +1018,7 @@ section {
 .capabilities-intro {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 4rem;
+    margin: 0 auto 3rem;
 }
 
 .capabilities-intro h2 {
@@ -1680,7 +1687,7 @@ section {
 .section-header--split {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem 4rem;
+    gap: 2rem 3rem;
     align-items: end;
 }
 
@@ -1777,7 +1784,7 @@ section {
     position: relative;
     z-index: 2;
     width: 100%;
-    padding: 8rem 0 5rem;
+    padding: 8rem 0 4rem;
 }
 
 .hero-v2__content .container {
@@ -1945,7 +1952,7 @@ section {
 .about-v2__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3.5rem;
+    gap: 3rem;
     align-items: stretch;
 }
 
@@ -2509,7 +2516,7 @@ section {
 .process-v2__header {
     text-align: left;
     max-width: none;
-    margin-bottom: 2.75rem;
+    margin-bottom: 2.25rem;
 }
 
 .process-v2__header .section-heading {
@@ -2621,7 +2628,7 @@ section {
 .trust-v2__header {
     text-align: left;
     max-width: none;
-    margin-bottom: 2.75rem;
+    margin-bottom: 2.25rem;
 }
 
 .trust-v2__header .section-heading {
@@ -2707,7 +2714,7 @@ section {
     position: relative;
     z-index: 2;
     width: 100%;
-    padding: 4.5rem 0;
+    padding: var(--section-padding) 0;
     color: var(--text-white);
 }
 
@@ -2960,7 +2967,7 @@ body.home .navbar {
 
 @media (max-width: 968px) {
     :root {
-        --section-padding: 3.5rem;
+        --section-padding: 2.75rem;
     }
 
     .hero-v2 {
@@ -3100,7 +3107,7 @@ body.home .navbar {
 
 @media (max-width: 640px) {
     :root {
-        --section-padding: 2.5rem;
+        --section-padding: 2rem;
     }
 
     .hero-v2__actions,
@@ -3187,7 +3194,7 @@ body.home .navbar {
     position: relative;
     z-index: 2;
     width: 100%;
-    padding: 7rem 0 4.5rem;
+    padding: 7rem 0 3.5rem;
 }
 
 .page-hero__content .container {
@@ -3257,7 +3264,7 @@ body.home .navbar {
 .services-intro__grid {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 3rem 4.5rem;
+    gap: 2.5rem 3.5rem;
     align-items: center;
 }
 
@@ -3458,9 +3465,9 @@ body.home .navbar {
 .materials-v2__header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem 4rem;
+    gap: 2rem 3rem;
     align-items: start;
-    margin-bottom: 2.75rem;
+    margin-bottom: 2.25rem;
 }
 
 .materials-v2__header .section-heading {
@@ -3581,7 +3588,7 @@ body.home .navbar {
 
 @media (max-width: 640px) {
     .page-hero__content {
-        padding: 6rem 0 3.5rem;
+        padding: 6rem 0 3rem;
     }
 
     .service-block__content {
@@ -3626,7 +3633,7 @@ body.home .navbar {
 .equip-showcase__list {
     display: flex;
     flex-direction: column;
-    gap: 4.5rem;
+    gap: 3rem;
 }
 
 .equip-block {
@@ -3736,15 +3743,15 @@ body.home .navbar {
 /* Equipment benefits */
 .equip-benefits {
     background: #f9fafb;
-    padding: 4rem 0 var(--section-padding);
+    padding: var(--section-padding) 0;
 }
 
 .equip-benefits__header {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem 4rem;
+    gap: 2rem 3rem;
     align-items: start;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.25rem;
 }
 
 .equip-benefits__header .section-heading {
@@ -3765,26 +3772,38 @@ body.home .navbar {
 .equip-benefits__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem 1.25rem;
+    gap: 1rem;
 }
 
 .equip-benefits__item {
-    padding: 0.25rem 0;
+    background: var(--bg-white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    padding: 1.375rem 1.25rem 1.5rem;
 }
 
 .equip-benefits__icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+    display: block;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    line-height: 0;
 }
 
 .equip-benefits__icon svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
+}
+
+.equip-benefits__icon--orange {
+    color: #e8913a;
+}
+
+.equip-benefits__icon--red {
+    color: #d64545;
+}
+
+.equip-benefits__icon--blue {
+    color: var(--primary-color);
 }
 
 .equip-benefits__item h3 {
@@ -3812,7 +3831,7 @@ body.home .navbar {
 
 @media (max-width: 968px) {
     .equip-showcase__list {
-        gap: 3.5rem;
+        gap: 2.75rem;
     }
 
     .equip-block,
