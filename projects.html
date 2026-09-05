@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-projects">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -21,7 +21,7 @@
                         <span class="logo-laser">LASER</span>
                     </div>
                 </a>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -33,206 +33,273 @@
                     <li><a href="projects.html" class="active">Custom Projects</a></li>
                     <li><a href="capabilities.html">Capabilities</a></li>
                     <li><a href="quote.html" class="btn-nav">Request A Quote</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Custom Projects</h1>
-            <p>Bringing your unique ideas to life with precision and expertise</p>
+    <!-- Hero -->
+    <section class="page-hero" aria-label="Custom projects hero">
+        <div class="page-hero__media">
+            <img src="images/custom-parts.jpg" alt="Custom fabricated metal components" onerror="this.src='images/fabrication.jpg'">
+            <div class="page-hero__overlay"></div>
         </div>
-    </section>
-
-    <!-- Projects Intro -->
-    <section class="projects-intro">
-        <div class="container">
-            <div class="intro-content">
-                <h2>Custom Fabrication Solutions</h2>
-                <p>At Rapid Laser, we specialize in turning your concepts into reality. Whether you need a one-off prototype or a custom production run, our team has the expertise and equipment to deliver exceptional results.</p>
-                <p>We work closely with clients across various industries to design, develop, and manufacture custom sheet metal projects. From initial concept to final delivery, we're committed to exceeding your expectations.</p>
+        <div class="page-hero__content">
+            <div class="container">
+                <p class="eyebrow eyebrow--light">Custom Projects</p>
+                <h1 class="page-hero__title">
+                    Real Projects.<br>
+                    <span class="text-accent">Real Solutions.</span>
+                </h1>
+                <p class="page-hero__subtitle">From one-off prototypes to complex production runs, we work with businesses across Melbourne and Australia to bring their ideas to life.</p>
             </div>
         </div>
+        <p class="page-hero__script" aria-hidden="true">Ideas into<br>reality</p>
     </section>
 
-    <!-- Project Categories -->
-    <section class="project-categories">
+    <!-- Credibility strip -->
+    <section class="spec-strip projects-cred-strip" aria-label="Project credentials">
         <div class="container">
-            <h2 class="section-title">Project Types</h2>
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images/industrial.jpg" alt="Industrial Projects" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+            <div class="spec-strip__grid">
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
                     </div>
-                    <div class="category-content">
-                        <h3>Industrial Components</h3>
-                        <p>Custom machinery parts, enclosures, brackets, and structural components for industrial applications.</p>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images/architectural.jpg" alt="Architectural Projects" onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=600&h=400&fit=crop'">
-                    </div>
-                    <div class="category-content">
-                        <h3>Architectural Metalwork</h3>
-                        <p>Decorative screens, panels, railings, and custom architectural features in various finishes.</p>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Diverse Industries</span>
+                        <span class="spec-strip__desc">A wide range of applications</span>
                     </div>
                 </div>
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images/prototypes.jpg" alt="Prototypes" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=600&h=400&fit=crop'">
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/></svg>
                     </div>
-                    <div class="category-content">
-                        <h3>Prototypes</h3>
-                        <p>Rapid prototyping services for testing and development before full production runs.</p>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images/enclosures.jpg" alt="Enclosures" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&h=400&fit=crop'">
-                    </div>
-                    <div class="category-content">
-                        <h3>Enclosures & Cabinets</h3>
-                        <p>Custom electrical enclosures, control cabinets, and protective housings.</p>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Custom Solutions</span>
+                        <span class="spec-strip__desc">Tailored to your needs</span>
                     </div>
                 </div>
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images/signage.jpg" alt="Signage" onerror="this.src='https://images.unsplash.com/photo-1581092795462-4c7b1e36f856?w=600&h=400&fit=crop'">
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     </div>
-                    <div class="category-content">
-                        <h3>Signage & Display</h3>
-                        <p>Laser-cut signs, display stands, and promotional items in metal.</p>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">High Quality</span>
+                        <span class="spec-strip__desc">Precision manufacture</span>
                     </div>
                 </div>
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="images/custom-parts.jpg" alt="Custom Parts" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
                     </div>
-                    <div class="category-content">
-                        <h3>Custom Parts</h3>
-                        <p>Specialized components designed and manufactured to your exact specifications.</p>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Trusted Partner</span>
+                        <span class="spec-strip__desc">Long-term relationships</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process-section">
+    <!-- Featured Projects -->
+    <section class="projects-gallery" aria-label="Featured projects">
         <div class="container">
-            <h2 class="section-title">Our Project Process</h2>
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Consultation</h3>
-                        <p>We discuss your project requirements, specifications, and goals to fully understand your needs.</p>
-                    </div>
+            <div class="projects-gallery__header">
+                <div>
+                    <p class="eyebrow">Our Work</p>
+                    <h2 class="section-heading">Featured Projects</h2>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Design & Planning</h3>
-                        <p>Our team creates detailed CAD drawings and plans, optimizing for manufacturability and cost.</p>
+                <p class="projects-gallery__intro">Explore a selection of custom projects we've manufactured for our clients. Each project represents our commitment to quality, precision and delivering practical solutions.</p>
+            </div>
+
+            <div class="project-filters" role="tablist" aria-label="Filter projects by category">
+                <button type="button" class="project-filters__btn is-active" data-filter="all" role="tab" aria-selected="true">All Projects</button>
+                <button type="button" class="project-filters__btn" data-filter="industrial-components" role="tab" aria-selected="false">Industrial Components</button>
+                <button type="button" class="project-filters__btn" data-filter="enclosures-cabinets" role="tab" aria-selected="false">Enclosures &amp; Cabinets</button>
+                <button type="button" class="project-filters__btn" data-filter="architectural-metalwork" role="tab" aria-selected="false">Architectural Metalwork</button>
+                <button type="button" class="project-filters__btn" data-filter="prototypes" role="tab" aria-selected="false">Prototypes</button>
+                <button type="button" class="project-filters__btn" data-filter="signage-display" role="tab" aria-selected="false">Signage &amp; Display</button>
+                <button type="button" class="project-filters__btn" data-filter="custom-parts" role="tab" aria-selected="false">Custom Parts</button>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card" data-category="industrial-components">
+                    <div class="project-card__media">
+                        <img src="images/industrial.jpg" alt="Industrial metal components" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
                     </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Approval & Quote</h3>
-                        <p>We provide a detailed quote and timeline, making any necessary revisions before proceeding.</p>
+                    <h3>Industrial Components</h3>
+                    <p>Precision components for various industrial applications</p>
+                </article>
+
+                <article class="project-card" data-category="enclosures-cabinets">
+                    <div class="project-card__media">
+                        <img src="images/enclosures.jpg" alt="Custom metal enclosures and cabinets" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&h=400&fit=crop'">
                     </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Manufacturing</h3>
-                        <p>Your project is manufactured using our state-of-the-art equipment with quality checks throughout.</p>
+                    <h3>Enclosures &amp; Cabinets</h3>
+                    <p>Custom enclosures for electrical and equipment housing</p>
+                </article>
+
+                <article class="project-card" data-category="architectural-metalwork">
+                    <div class="project-card__media">
+                        <img src="images/architectural.jpg" alt="Architectural metalwork" onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=600&h=400&fit=crop'">
                     </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <div class="step-content">
-                        <h3>Quality Control</h3>
-                        <p>Final inspection ensures every detail meets our high standards and your specifications.</p>
+                    <h3>Architectural Metalwork</h3>
+                    <p>Custom metalwork for architectural applications</p>
+                </article>
+
+                <article class="project-card" data-category="prototypes">
+                    <div class="project-card__media">
+                        <img src="images/prototypes.jpg" alt="Prototype metal fabrication" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=600&h=400&fit=crop'">
                     </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">6</div>
-                    <div class="step-content">
-                        <h3>Delivery</h3>
-                        <p>Completed project is carefully packaged and delivered on schedule.</p>
+                    <h3>Prototypes</h3>
+                    <p>From concept to functional prototypes</p>
+                </article>
+
+                <article class="project-card" data-category="signage-display">
+                    <div class="project-card__media">
+                        <img src="images/signage.jpg" alt="Custom metal signage and display" onerror="this.src='https://images.unsplash.com/photo-1581092795462-4c7b1e36f856?w=600&h=400&fit=crop'">
                     </div>
-                </div>
+                    <h3>Signage &amp; Display</h3>
+                    <p>Custom signage and display solutions</p>
+                </article>
+
+                <article class="project-card" data-category="custom-parts">
+                    <div class="project-card__media">
+                        <img src="images/custom-parts.jpg" alt="Specialised custom metal parts" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                    </div>
+                    <h3>Custom Parts</h3>
+                    <p>Specialised parts for unique requirements</p>
+                </article>
+
+                <article class="project-card" data-category="fabricated-assemblies">
+                    <div class="project-card__media">
+                        <img src="images/fabrication.jpg" alt="Fabricated metal assemblies" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                    </div>
+                    <h3>Fabricated Assemblies</h3>
+                    <p>Complex assemblies and welded fabrications</p>
+                </article>
+
+                <article class="project-card" data-category="rolling-forming">
+                    <div class="project-card__media">
+                        <img src="images/rolling-machine.jpg" alt="Rolled and formed metal components" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                    </div>
+                    <h3>Rolling &amp; Forming</h3>
+                    <p>Cylindrical and curved metal components</p>
+                </article>
+
+                <article class="project-card" data-category="specialised-fabrications">
+                    <div class="project-card__media">
+                        <img src="images/welding.jpg" alt="Specialised metal fabrication" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=600&h=400&fit=crop'">
+                    </div>
+                    <h3>Specialised Fabrications</h3>
+                    <p>Custom solutions for specialised applications</p>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Industries Section -->
-    <section class="industries-section">
+    <!-- Project Process -->
+    <section class="projects-process" aria-label="Project process">
         <div class="container">
-            <h2 class="section-title">Industries We Serve</h2>
-            <div class="industries-grid">
-                <div class="industry-item">
-                    <h3>Manufacturing</h3>
-                    <p>Custom components and assemblies</p>
+            <div class="projects-process__header">
+                <div>
+                    <p class="eyebrow">From Concept to Completion</p>
+                    <h2 class="section-heading">Our Project Process</h2>
                 </div>
-                <div class="industry-item">
-                    <h3>Construction</h3>
-                    <p>Structural and architectural metalwork</p>
-                </div>
-                <div class="industry-item">
-                    <h3>Engineering</h3>
-                    <p>Precision parts and prototypes</p>
-                </div>
-                <div class="industry-item">
-                    <h3>Technology</h3>
-                    <p>Enclosures and specialized housings</p>
-                </div>
-                <div class="industry-item">
-                    <h3>Retail</h3>
-                    <p>Display fixtures and signage</p>
-                </div>
-                <div class="industry-item">
-                    <h3>Agriculture</h3>
-                    <p>Equipment parts and modifications</p>
-                </div>
+                <p class="projects-process__intro">We work closely with our clients throughout every stage of their project, ensuring the best possible outcome.</p>
             </div>
+            <ol class="process-track">
+                <li class="process-track__step">
+                    <span class="process-track__num">01</span>
+                    <div class="process-track__content">
+                        <h3>Discuss</h3>
+                        <p>Your requirements</p>
+                    </div>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">02</span>
+                    <div class="process-track__content">
+                        <h3>Design</h3>
+                        <p>Develop solutions</p>
+                    </div>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">03</span>
+                    <div class="process-track__content">
+                        <h3>Quote</h3>
+                        <p>Detailed pricing</p>
+                    </div>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">04</span>
+                    <div class="process-track__content">
+                        <h3>Manufacture</h3>
+                        <p>Precision production</p>
+                    </div>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">05</span>
+                    <div class="process-track__content">
+                        <h3>Inspect</h3>
+                        <p>Quality control</p>
+                    </div>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">06</span>
+                    <div class="process-track__content">
+                        <h3>Deliver</h3>
+                        <p>On time, every time</p>
+                    </div>
+                </li>
+            </ol>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="contact-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Have a Custom Project in Mind?</h2>
-                <p>Let's discuss how we can bring your vision to life with precision and quality</p>
-                <div class="cta-buttons">
-                    <a href="quote.html" class="btn btn-primary">Request a Quote</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+    <!-- Final CTA -->
+    <section class="cta-v2 cta-v2--page cta-v2--projects">
+        <div class="cta-v2__media">
+            <img src="images/industrial.jpg" alt="Custom metal fabrication at Rapid Laser" onerror="this.src='images/fabrication.jpg'">
+            <div class="cta-v2__overlay"></div>
+        </div>
+        <div class="cta-v2__content">
+            <div class="container cta-v2__inner">
+                <p class="eyebrow eyebrow--light">Have a Custom Project in Mind?</p>
+                <h2>Let's Make It Happen</h2>
+                <p>Send us your drawings, specifications or idea and we'll discuss the best way to bring your project to life.</p>
+                <div class="cta-v2__actions">
+                    <a href="quote.html" class="btn btn-primary btn--rect">Request A Quote <span class="btn-arrow" aria-hidden="true">→</span></a>
+                    <a href="contact.html" class="btn btn-outline-light btn--rect">Contact Us</a>
                 </div>
             </div>
+        </div>
+        <div class="cta-v2__script-wrap" aria-hidden="true">
+            <span class="cta-v2__script-line"></span>
+            <p class="cta-v2__script">Custom solutions<br>for real world<br>challenges</p>
+            <span class="cta-v2__script-line"></span>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer footer-v2">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <h4>Rapid Machining & Fabrication</h4>
-                    <p>Quality engineering and fabrication since 1986</p>
+                <div class="footer-col footer-col--brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="" onerror="this.style.display='none';">
+                        <span class="footer-logo__text">
+                            <span class="logo-rapid">RAPID</span>
+                            <span class="logo-laser">LASER</span>
+                        </span>
+                    </a>
+                    <p>Quality engineering and fabrication since 1986.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Our Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="equipment.html">Equipment</a></li>
                         <li><a href="capabilities.html">Capabilities</a></li>
                     </ul>
                 </div>
@@ -248,11 +315,16 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <p>5 Elsum Ave, Bayswater North<br>Victoria, 3153</p>
-                    <p><strong>Phone:</strong> 03 9729 3344</p>
+                    <p><strong>Phone:</strong> <a href="tel:0397293344">03 9729 3344</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; Copyright 2025 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+                <p class="footer-bottom__copy">&copy; Copyright 2025 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+                <div class="footer-bottom__legal">
+                    <a href="#">Privacy Policy</a>
+                    <span class="footer-bottom__sep" aria-hidden="true">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -260,4 +332,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

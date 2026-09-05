@@ -173,7 +173,7 @@ const observer = new IntersectionObserver(function(entries) {
 // Observe elements for scroll animations
 document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll(
-        '.photo-card, .service-card, .service-block, .material-panel, .manufacture-v2__item, .trust-v2__item, .process-track__step, .spec-strip__item, .about-v2__grid, .equipment-v2__grid'
+        '.photo-card, .service-card, .service-block, .material-panel, .manufacture-v2__item, .trust-v2__item, .process-track__step, .spec-strip__item, .about-v2__grid, .equipment-v2__grid, .project-card'
     );
     
     animatedElements.forEach(el => {
@@ -345,6 +345,36 @@ function createBackToTop() {
 
 // Initialize back to top button
 document.addEventListener('DOMContentLoaded', createBackToTop);
+
+// ========================================
+// Project Gallery Filtering
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBar = document.querySelector('.project-filters');
+    if (!filterBar) return;
+
+    const filterButtons = filterBar.querySelectorAll('.project-filters__btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+
+            filterButtons.forEach(btn => {
+                btn.classList.remove('is-active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            this.classList.add('is-active');
+            this.setAttribute('aria-selected', 'true');
+
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const show = filter === 'all' || category === filter;
+                card.classList.toggle('is-hidden', !show);
+            });
+        });
+    });
+});
 
 // ========================================
 // Console Welcome Message
