@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-equipment">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -21,7 +21,7 @@
                         <span class="logo-laser">LASER</span>
                     </div>
                 </a>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -33,185 +33,337 @@
                     <li><a href="projects.html">Custom Projects</a></li>
                     <li><a href="capabilities.html">Capabilities</a></li>
                     <li><a href="quote.html" class="btn-nav">Request A Quote</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Our Equipment</h1>
-            <p>State-of-the-art machinery for precision manufacturing</p>
+    <!-- Hero -->
+    <section class="page-hero" aria-label="Equipment hero">
+        <div class="page-hero__media">
+            <img src="images/lasercutting.jpg" alt="Laser cutting machinery in action with sparks" onerror="this.src='images/slide1.jpg'">
+            <div class="page-hero__overlay"></div>
         </div>
+        <div class="page-hero__content">
+            <div class="container">
+                <p class="eyebrow eyebrow--light">Our Equipment</p>
+                <h1 class="page-hero__title">
+                    State-of-the-art<br>
+                    Equipment for<br>
+                    <span class="text-accent">Precision Manufacturing.</span>
+                </h1>
+                <p class="page-hero__subtitle">We invest in the latest technology to ensure we can deliver the highest quality results for our customers.</p>
+            </div>
+        </div>
+        <p class="page-hero__script" aria-hidden="true">Investing<br>in better outcomes</p>
     </section>
 
-    <!-- Equipment Section -->
-    <section class="equipment-section">
+    <!-- Credibility strip -->
+    <section class="spec-strip equip-cred-strip" aria-label="Equipment credentials">
         <div class="container">
-            <div class="equipment-intro">
-                <h2>Advanced Manufacturing Technology</h2>
-                <p>At Rapid Laser, we invest in the latest technology to ensure we can deliver the highest quality results for our customers. Our equipment is regularly maintained and upgraded to meet the demands of modern manufacturing.</p>
-            </div>
-
-            <div class="equipment-grid">
-                <div class="equipment-card">
-                    <div class="equipment-image">
-                        <img src="images/laser-cutter.jpg" alt="Laser Cutting Machine" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&h=400&fit=crop'">
+            <div class="spec-strip__grid">
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
-                    <div class="equipment-content">
-                        <h3>Laser Cutting Machine</h3>
-                        <p>Our high-powered laser cutting machine can cut through materials up to 20mm thick with exceptional precision and speed.</p>
-                        <ul class="equipment-specs">
-                            <li><strong>Cutting Capacity:</strong> Up to 20mm</li>
-                            <li><strong>Materials:</strong> Steel, Stainless Steel, Aluminum</li>
-                            <li><strong>Precision:</strong> ±0.1mm tolerance</li>
-                            <li><strong>Bed Size:</strong> Large format cutting area</li>
-                        </ul>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Modern Machinery</span>
+                        <span class="spec-strip__desc">Reliable, high-performance equipment</span>
                     </div>
                 </div>
-
-                <div class="equipment-card reverse">
-                    <div class="equipment-image">
-                        <img src="images/cnc-folder.jpg" alt="CNC Folding Machine" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=600&h=400&fit=crop'">
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                     </div>
-                    <div class="equipment-content">
-                        <h3>CNC Folding Machine</h3>
-                        <p>Computer-controlled folding machine ensures consistent, accurate bends for all your sheet metal fabrication needs.</p>
-                        <ul class="equipment-specs">
-                            <li><strong>Type:</strong> Computer Numerical Control</li>
-                            <li><strong>Accuracy:</strong> Precise angle control</li>
-                            <li><strong>Capacity:</strong> Various material thicknesses</li>
-                            <li><strong>Automation:</strong> Programmable sequences</li>
-                        </ul>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Regularly Upgraded</span>
+                        <span class="spec-strip__desc">To meet industry demands</span>
                     </div>
                 </div>
-
-                <div class="equipment-card">
-                    <div class="equipment-image">
-                        <img src="images/rolling-machine.jpg" alt="Rolling Machine" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
                     </div>
-                    <div class="equipment-content">
-                        <h3>Rolling Machine</h3>
-                        <p>Professional metal rolling equipment for creating curved and cylindrical components with precision.</p>
-                        <ul class="equipment-specs">
-                            <li><strong>Capability:</strong> Various radii and curves</li>
-                            <li><strong>Materials:</strong> Multiple metal types</li>
-                            <li><strong>Control:</strong> Precision rolling adjustment</li>
-                            <li><strong>Applications:</strong> Cylinders, cones, arcs</li>
-                        </ul>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Skilled Operators</span>
+                        <span class="spec-strip__desc">Experienced and certified</span>
                     </div>
                 </div>
-
-                <div class="equipment-card reverse">
-                    <div class="equipment-image">
-                        <img src="images/cad-station.jpg" alt="CAD Design Station" onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=600&h=400&fit=crop'">
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                     </div>
-                    <div class="equipment-content">
-                        <h3>CAD Design Stations</h3>
-                        <p>Advanced computer-aided design workstations equipped with the latest software for design and drafting.</p>
-                        <ul class="equipment-specs">
-                            <li><strong>Software:</strong> Latest CAD/CAM systems</li>
-                            <li><strong>Capabilities:</strong> 2D and 3D modeling</li>
-                            <li><strong>Integration:</strong> Direct to manufacturing</li>
-                            <li><strong>Visualization:</strong> 3D rendering and simulation</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="equipment-card">
-                    <div class="equipment-image">
-                        <img src="images/lifting-equipment.jpg" alt="Lifting Equipment" onerror="this.src='https://images.unsplash.com/photo-1581092795462-4c7b1e36f856?w=600&h=400&fit=crop'">
-                    </div>
-                    <div class="equipment-content">
-                        <h3>Lifting Equipment</h3>
-                        <p>Heavy-duty lifting equipment allows us to handle large and heavy components safely and efficiently.</p>
-                        <ul class="equipment-specs">
-                            <li><strong>Capacity:</strong> Heavy load handling</li>
-                            <li><strong>Safety:</strong> Certified and maintained</li>
-                            <li><strong>Versatility:</strong> Various lifting solutions</li>
-                            <li><strong>Efficiency:</strong> Streamlined material handling</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="equipment-card reverse">
-                    <div class="equipment-image">
-                        <img src="images/welding.jpg" alt="Welding Equipment" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=600&h=400&fit=crop'">
-                    </div>
-                    <div class="equipment-content">
-                        <h3>Welding Equipment</h3>
-                        <p>Professional welding equipment for joining metal components with strength and precision.</p>
-                        <ul class="equipment-specs">
-                            <li><strong>Types:</strong> MIG, TIG, and Arc welding</li>
-                            <li><strong>Materials:</strong> Various metals and alloys</li>
-                            <li><strong>Quality:</strong> Certified welders</li>
-                            <li><strong>Applications:</strong> Structural and fabrication</li>
-                        </ul>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Higher Quality</span>
+                        <span class="spec-strip__desc">Consistent, precise results</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Equipment Benefits -->
-    <section class="equipment-benefits">
+    <!-- Equipment showcase -->
+    <section class="equip-showcase" aria-label="Equipment showcase">
         <div class="container">
-            <h2 class="section-title">Benefits of Our Modern Equipment</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">⚡</div>
+            <div class="equip-showcase__list">
+
+                <article class="equip-block" id="laser-cutting">
+                    <div class="equip-block__media">
+                        <img src="images/laser-cutter.jpg" alt="TRUMPF laser cutting machine" onerror="this.src='images/facility.jpg'">
+                    </div>
+                    <div class="equip-block__content">
+                        <div class="equip-block__num-row">
+                            <span class="equip-block__num">01</span>
+                            <span class="equip-block__dash" aria-hidden="true"></span>
+                        </div>
+                        <h2>TRUMPF Laser Cutting Machine</h2>
+                        <p class="equip-block__tagline">High-performance laser cutting for precision components.</p>
+                        <p class="equip-block__body">Our TRUMPF laser cutting machine can cut through materials up to 20mm thick with exceptional precision and speed, delivering clean, accurate cuts for a wide range of applications.</p>
+                        <dl class="spec-panel">
+                            <div class="spec-panel__row">
+                                <dt>Cutting Capacity</dt>
+                                <dd>Up to 20mm</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Materials</dt>
+                                <dd>Mild Steel, Stainless Steel, Aluminium</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Precision</dt>
+                                <dd>±0.1mm tolerance</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Bed Size</dt>
+                                <dd>Large format cutting area</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="equip-block equip-block--reverse" id="cnc-folding">
+                    <div class="equip-block__media">
+                        <img src="images/cnc-folder.jpg" alt="CNC folding machine" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=800&h=600&fit=crop'">
+                    </div>
+                    <div class="equip-block__content">
+                        <div class="equip-block__num-row">
+                            <span class="equip-block__num">02</span>
+                            <span class="equip-block__dash" aria-hidden="true"></span>
+                        </div>
+                        <h2>CNC Folding Machine</h2>
+                        <p class="equip-block__tagline">Computer-controlled bending for complex parts.</p>
+                        <p class="equip-block__body">Our CNC folding machine ensures consistent, accurate bends across your entire production run. Perfect for creating enclosures, brackets and complex formed parts.</p>
+                        <dl class="spec-panel">
+                            <div class="spec-panel__row">
+                                <dt>Type</dt>
+                                <dd>Computer Numerical Control</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Accuracy</dt>
+                                <dd>Precise angle control</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Capacity</dt>
+                                <dd>Various material thicknesses</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Automation</dt>
+                                <dd>Programmable sequences</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="equip-block" id="rolling">
+                    <div class="equip-block__media">
+                        <img src="images/rolling-machine.jpg" alt="Metal rolling machine" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop'">
+                    </div>
+                    <div class="equip-block__content">
+                        <div class="equip-block__num-row">
+                            <span class="equip-block__num">03</span>
+                            <span class="equip-block__dash" aria-hidden="true"></span>
+                        </div>
+                        <h2>Rolling Machine</h2>
+                        <p class="equip-block__tagline">Creating curved and cylindrical components.</p>
+                        <p class="equip-block__body">Our rolling equipment can create various curved forms, from gentle arcs to tight cylinders, across a range of materials and thicknesses.</p>
+                        <dl class="spec-panel">
+                            <div class="spec-panel__row">
+                                <dt>Capability</dt>
+                                <dd>Various radii and curves</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Materials</dt>
+                                <dd>Multiple metal types</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Control</dt>
+                                <dd>Precision rolling adjustment</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Applications</dt>
+                                <dd>Cylinders, cones, arcs and more</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="equip-block equip-block--reverse" id="cad">
+                    <div class="equip-block__media">
+                        <img src="images/cad-station.jpg" alt="CAD design workstation with technical drawings" onerror="this.src='images/drafting.jpg'">
+                    </div>
+                    <div class="equip-block__content">
+                        <div class="equip-block__num-row">
+                            <span class="equip-block__num">04</span>
+                            <span class="equip-block__dash" aria-hidden="true"></span>
+                        </div>
+                        <h2>CAD Design Stations</h2>
+                        <p class="equip-block__tagline">Advanced design and engineering support.</p>
+                        <p class="equip-block__body">Our CAD workstations are equipped with the latest software for 2D and 3D design, helping turn your ideas into manufacturable components.</p>
+                        <dl class="spec-panel">
+                            <div class="spec-panel__row">
+                                <dt>Software</dt>
+                                <dd>Latest CAD/CAM systems</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Capabilities</dt>
+                                <dd>2D and 3D modelling</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Integration</dt>
+                                <dd>Direct to manufacturing</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Visualisation</dt>
+                                <dd>3D rendering and simulation</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </article>
+
+                <article class="equip-block" id="lifting">
+                    <div class="equip-block__media">
+                        <img src="images/lifting-equipment.jpg" alt="Industrial lifting equipment handling heavy components" onerror="this.src='https://images.unsplash.com/photo-1581092795462-4c7b1e36f856?w=800&h=600&fit=crop'">
+                    </div>
+                    <div class="equip-block__content">
+                        <div class="equip-block__num-row">
+                            <span class="equip-block__num">05</span>
+                            <span class="equip-block__dash" aria-hidden="true"></span>
+                        </div>
+                        <h2>Lifting Equipment</h2>
+                        <p class="equip-block__tagline">Safe and efficient material handling.</p>
+                        <p class="equip-block__body">Our lifting equipment allows us to safely handle large and heavy components throughout the manufacturing process.</p>
+                        <dl class="spec-panel">
+                            <div class="spec-panel__row">
+                                <dt>Capacity</dt>
+                                <dd>Heavy load handling</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Safety</dt>
+                                <dd>Certified and maintained</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Versatility</dt>
+                                <dd>Various lifting solutions</dd>
+                            </div>
+                            <div class="spec-panel__row">
+                                <dt>Efficiency</dt>
+                                <dd>Streamlined material movement</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="equip-benefits" aria-label="Equipment benefits">
+        <div class="container">
+            <div class="equip-benefits__header">
+                <div>
+                    <p class="eyebrow">The Rapid Laser Advantage</p>
+                    <h2 class="section-heading">Benefits of Our Modern Equipment</h2>
+                </div>
+                <p class="equip-benefits__intro">Our investment in quality equipment allows us to deliver better results, faster turnaround times, and greater flexibility for your projects.</p>
+            </div>
+            <div class="equip-benefits__grid">
+                <div class="equip-benefits__item">
+                    <span class="equip-benefits__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </span>
                     <h3>Faster Production</h3>
-                    <p>State-of-the-art machinery allows for quicker turnaround times without compromising quality</p>
+                    <p>Modern machinery allows for quicker turnaround times without compromising quality.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🎯</div>
+                <div class="equip-benefits__item">
+                    <span class="equip-benefits__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="9" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke-width="1.5"/><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/></svg>
+                    </span>
                     <h3>Higher Precision</h3>
-                    <p>CNC and laser technology ensure consistent accuracy across all projects</p>
+                    <p>CNC and laser technology ensure consistent accuracy across all projects.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">💎</div>
+                <div class="equip-benefits__item">
+                    <span class="equip-benefits__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                    </span>
                     <h3>Superior Quality</h3>
-                    <p>Modern equipment delivers cleaner cuts and better finishes</p>
+                    <p>Advanced equipment delivers cleaner cuts and better finishes.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔄</div>
-                    <h3>Versatility</h3>
-                    <p>Ability to handle a wide range of materials, thicknesses, and project types</p>
+                <div class="equip-benefits__item">
+                    <span class="equip-benefits__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </span>
+                    <h3>Greater Flexibility</h3>
+                    <p>Ability to handle a wide range of materials, thicknesses and project types.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="contact-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Experience the Difference</h2>
-                <p>See how our advanced equipment can bring precision and quality to your next project</p>
-                <div class="cta-buttons">
-                    <a href="quote.html" class="btn btn-primary">Request a Quote</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+    <!-- Final CTA -->
+    <section class="cta-v2 cta-v2--page cta-v2--equipment">
+        <div class="cta-v2__media">
+            <img src="images/industrial.jpg" alt="Industrial metal fabrication at Rapid Laser" onerror="this.src='images/facility.jpg'">
+            <div class="cta-v2__overlay"></div>
+        </div>
+        <div class="cta-v2__content">
+            <div class="container cta-v2__inner">
+                <p class="eyebrow eyebrow--light">See Our Equipment in Action</p>
+                <h2>Discuss Your Equipment Needs</h2>
+                <p>Contact us today to find out how our machinery and capabilities can support your next project.</p>
+                <div class="cta-v2__actions">
+                    <a href="quote.html" class="btn btn-primary btn--rect">Request A Quote <span class="btn-arrow" aria-hidden="true">→</span></a>
+                    <a href="contact.html" class="btn btn-outline-light btn--rect">Contact Us</a>
                 </div>
             </div>
+        </div>
+        <div class="cta-v2__script-wrap" aria-hidden="true">
+            <span class="cta-v2__script-line"></span>
+            <p class="cta-v2__script">Precision<br>through capability</p>
+            <span class="cta-v2__script-line"></span>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer footer-v2">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <h4>Rapid Machining & Fabrication</h4>
-                    <p>Quality engineering and fabrication since 1986</p>
+                <div class="footer-col footer-col--brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="" onerror="this.style.display='none';">
+                        <span class="footer-logo__text">
+                            <span class="logo-rapid">RAPID</span>
+                            <span class="logo-laser">LASER</span>
+                        </span>
+                    </a>
+                    <p>Quality engineering and fabrication since 1986.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Our Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="projects.html">Custom Projects</a></li>
                         <li><a href="capabilities.html">Capabilities</a></li>
                     </ul>
                 </div>
@@ -227,11 +379,16 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <p>5 Elsum Ave, Bayswater North<br>Victoria, 3153</p>
-                    <p><strong>Phone:</strong> 03 9729 3344</p>
+                    <p><strong>Phone:</strong> <a href="tel:0397293344">03 9729 3344</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; Copyright 2025 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+                <p class="footer-bottom__copy">&copy; Copyright 2025 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+                <div class="footer-bottom__legal">
+                    <a href="#">Privacy Policy</a>
+                    <span class="footer-bottom__sep" aria-hidden="true">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -239,4 +396,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
