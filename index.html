@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -21,7 +21,7 @@
                         <span class="logo-laser">LASER</span>
                     </div>
                 </a>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -33,207 +33,376 @@
                     <li><a href="projects.html">Custom Projects</a></li>
                     <li><a href="capabilities.html">Capabilities</a></li>
                     <li><a href="quote.html" class="btn-nav">Request A Quote</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html" class="nav-contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-image">
-            <img src="images/lasercutting.jpg" alt="Laser Cutting in Action" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1920&h=800&fit=crop'">
-            <div class="hero-overlay"></div>
+    <section class="hero-v2" aria-label="Hero">
+        <div class="hero-v2__media">
+            <img src="images/lasercutting.jpg" alt="Laser cutting in action with sparks" onerror="this.src='images/slide1.jpg'">
+            <div class="hero-v2__overlay"></div>
         </div>
-        <div class="hero-content">
+        <div class="hero-v2__content">
             <div class="container">
-                <h1 class="hero-title">Laser Cutting & More in Bayswater, Melbourne</h1>
-                <p class="hero-subtitle">Precision engineering and fabrication solutions since 1986</p>
-                <div class="hero-buttons">
-                    <a href="quote.html" class="btn btn-primary">Get A Quote</a>
-                    <a href="services.html" class="btn btn-secondary">Our Services</a>
+                <p class="eyebrow eyebrow--light">Precision Engineering · Bayswater, Melbourne</p>
+                <h1 class="hero-v2__title">
+                    Precision Metalwork.<br>
+                    <span class="text-accent">Built in Melbourne.</span>
+                </h1>
+                <p class="hero-v2__subtitle">Laser cutting, CNC folding, fabrication and custom manufacturing from our Bayswater facility.</p>
+                <div class="hero-v2__actions">
+                    <a href="quote.html" class="btn btn-primary">Request A Quote <span class="btn-arrow" aria-hidden="true">→</span></a>
+                    <a href="capabilities.html" class="btn btn-outline-light">Explore Capabilities</a>
+                </div>
+            </div>
+        </div>
+        <p class="hero-v2__script" aria-hidden="true">From concept to creation</p>
+    </section>
+
+    <!-- Credibility Strip -->
+    <section class="spec-strip" aria-label="Key capabilities">
+        <div class="container">
+            <div class="spec-strip__grid">
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Since</span>
+                        <strong class="spec-strip__value">1986</strong>
+                        <span class="spec-strip__desc">Over 35 years of experience</span>
+                    </div>
+                </div>
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <div class="spec-strip__text">
+                        <strong class="spec-strip__value">20mm</strong>
+                        <span class="spec-strip__desc">Laser cutting capacity</span>
+                    </div>
+                </div>
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                    </div>
+                    <div class="spec-strip__text">
+                        <strong class="spec-strip__value">End-to-End</strong>
+                        <span class="spec-strip__desc">CAD to finished product</span>
+                    </div>
+                </div>
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <div class="spec-strip__text">
+                        <strong class="spec-strip__value">Melbourne</strong>
+                        <span class="spec-strip__desc">Bayswater facility, Victoria</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section class="about-v2" id="about">
         <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="images/facility.jpg" alt="Laser Cutting Facility" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+            <div class="about-v2__grid">
+                <div class="about-v2__media">
+                    <img src="images/laser-cutter.jpg" alt="TRUMPF laser cutting machine at Rapid Laser facility" onerror="this.src='images/facility.jpg'">
+                    <p class="about-v2__caption">TRUMPF Laser Cutting — Precision, Speed, Reliability</p>
                 </div>
-                <div class="about-text">
-                    <h2>About Rapid Laser</h2>
-                    <p>Rapid Laser is a division of Rapid Machining and sheet metal Fabrication. From small beginnings in 1986 Rapid Machining has continually developed and is now a well respected one-stop engineering business.</p>
-                    <p>We have built our business by following a few basic rules:</p>
-                    <ul class="features-list">
+                <div class="about-v2__content">
+                    <p class="eyebrow">About Rapid Laser</p>
+                    <h2 class="section-heading">Engineering experience since 1986.</h2>
+                    <p>Rapid Laser is a division of Rapid Machining and sheet metal fabrication. From small beginnings in 1986 Rapid Machining has continually developed and is now a well respected one-stop engineering business.</p>
+                    <ul class="proof-list">
                         <li>
-                            <span class="feature-icon">✓</span>
-                            Meeting and exceeding customers expectations
+                            <span class="proof-list__icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </span>
+                            <span>Established manufacturing experience</span>
                         </li>
                         <li>
-                            <span class="feature-icon">✓</span>
-                            Accuracy and quality of our work
+                            <span class="proof-list__icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            </span>
+                            <span>Precision equipment and skilled operators</span>
                         </li>
                         <li>
-                            <span class="feature-icon">✓</span>
-                            Excellent customer service
-                        </li>
-                        <li>
-                            <span class="feature-icon">✓</span>
-                            Knowledge of our products and the industry
-                        </li>
-                        <li>
-                            <span class="feature-icon">✓</span>
-                            Expertise in the Design & development of our customers' products
+                            <span class="proof-list__icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                            </span>
+                            <span>Design through to finished manufacture</span>
                         </li>
                     </ul>
+                    <a href="capabilities.html" class="btn btn-primary">Learn More About Us</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section class="services-v2">
         <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <a href="services.html#design" class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                        </svg>
+            <div class="section-header section-header--split">
+                <div>
+                    <p class="eyebrow">Our Services</p>
+                    <h2 class="section-heading">Comprehensive Metal Fabrication Services</h2>
+                </div>
+                <div class="section-header__aside">
+                    <p>From precision laser cutting to complete fabrication, we deliver end-to-end metalwork solutions from our Bayswater facility.</p>
+                    <a href="services.html" class="link-arrow">View All Services <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+            <div class="services-v2__grid">
+                <a href="services.html#laser-cutting" class="photo-card photo-card--feature">
+                    <img src="images/lasercutting.jpg" alt="Precision laser cutting process" onerror="this.src='images/laser-cutting.jpg'">
+                    <div class="photo-card__overlay">
+                        <h3>Laser Cutting</h3>
+                        <p>Precision laser cutting services up to 20mm thickness</p>
+                        <span class="photo-card__arrow" aria-hidden="true">→</span>
                     </div>
+                </a>
+                <div class="services-v2__subgrid">
+                    <a href="capabilities.html" class="photo-card photo-card--small">
+                        <img src="images/cnc-folder.jpg" alt="CNC folding of metal brackets" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=600&h=400&fit=crop'">
+                        <div class="photo-card__overlay">
+                            <h3>CNC Folding</h3>
+                            <span class="photo-card__arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+                    <a href="services.html#fabrication" class="photo-card photo-card--small">
+                        <img src="images/fabrication.jpg" alt="Sheet metal fabrication components" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                        <div class="photo-card__overlay">
+                            <h3>Sheet Metal Fabrication</h3>
+                            <span class="photo-card__arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+                    <a href="services.html#drafting" class="photo-card photo-card--small">
+                        <img src="images/drafting.jpg" alt="CAD drafting and technical drawings" onerror="this.src='images/cad-station.jpg'">
+                        <div class="photo-card__overlay">
+                            <h3>CAD &amp; Drafting</h3>
+                            <span class="photo-card__arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+                    <a href="capabilities.html" class="photo-card photo-card--small">
+                        <img src="images/rolling-machine.jpg" alt="Metal rolling and forming" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop'">
+                        <div class="photo-card__overlay">
+                            <h3>Rolling &amp; Forming</h3>
+                            <span class="photo-card__arrow" aria-hidden="true">→</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section class="equipment-v2">
+        <div class="container">
+            <div class="equipment-v2__grid">
+                <div class="equipment-v2__intro">
+                    <p class="eyebrow eyebrow--light">Our Equipment</p>
+                    <h2 class="section-heading section-heading--light">State-of-the-art Manufacturing Technology</h2>
+                    <p>At Rapid Laser, we invest in the latest technology to ensure we can deliver the highest quality results for our customers. Our equipment is regularly maintained and upgraded to meet the demands of modern manufacturing.</p>
+                    <a href="equipment.html" class="btn btn-outline-light">View Our Equipment</a>
+                </div>
+                <div class="equipment-v2__image">
+                    <img src="images/laser-cutter.jpg" alt="TRUMPF laser cutting machinery" onerror="this.src='images/facility.jpg'">
+                </div>
+                <div class="equipment-v2__specs">
+                    <div class="equipment-v2__capacity">
+                        <span class="equipment-v2__capacity-value">20mm</span>
+                        <span class="equipment-v2__capacity-label">Cutting Capacity</span>
+                    </div>
+                    <dl class="spec-list">
+                        <div class="spec-list__row">
+                            <dt>Materials</dt>
+                            <dd>Mild Steel, Stainless Steel, Aluminium</dd>
+                        </div>
+                        <div class="spec-list__row">
+                            <dt>Precision</dt>
+                            <dd>±0.1mm tolerance</dd>
+                        </div>
+                        <div class="spec-list__row">
+                            <dt>Bed Size</dt>
+                            <dd>Large format cutting area</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Manufacture -->
+    <section class="manufacture-v2">
+        <div class="container">
+            <div class="section-header section-header--split">
+                <div>
+                    <p class="eyebrow">Custom Projects</p>
+                    <h2 class="section-heading">What We Manufacture</h2>
+                </div>
+                <div class="section-header__aside">
+                    <p>From one-off prototypes to production runs, we manufacture precision metalwork across a wide range of applications and industries.</p>
+                    <a href="projects.html" class="link-arrow">View All Projects <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+            <div class="manufacture-v2__grid">
+                <a href="projects.html" class="manufacture-v2__item">
+                    <img src="images/industrial.jpg" alt="Industrial components" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=400&fit=crop'">
+                    <span>Industrial Components</span>
+                </a>
+                <a href="projects.html" class="manufacture-v2__item">
+                    <img src="images/architectural.jpg" alt="Architectural metalwork" onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop'">
+                    <span>Architectural Metalwork</span>
+                </a>
+                <a href="projects.html" class="manufacture-v2__item">
+                    <img src="images/prototypes.jpg" alt="Prototypes" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=400&h=400&fit=crop'">
+                    <span>Prototypes</span>
+                </a>
+                <a href="projects.html" class="manufacture-v2__item">
+                    <img src="images/enclosures.jpg" alt="Enclosures and cabinets" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&h=400&fit=crop'">
+                    <span>Enclosures &amp; Cabinets</span>
+                </a>
+                <a href="projects.html" class="manufacture-v2__item">
+                    <img src="images/signage.jpg" alt="Signage and display" onerror="this.src='https://images.unsplash.com/photo-1581092795462-4c7b1e36f856?w=400&h=400&fit=crop'">
+                    <span>Signage &amp; Display</span>
+                </a>
+                <a href="projects.html" class="manufacture-v2__item">
+                    <img src="images/custom-parts.jpg" alt="Custom parts" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=400&fit=crop'">
+                    <span>Custom Parts</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-v2">
+        <div class="container">
+            <div class="section-header section-header--center">
+                <p class="eyebrow">Our Process</p>
+                <h2 class="section-heading">A Simple, Proven Process</h2>
+            </div>
+            <ol class="process-track">
+                <li class="process-track__step">
+                    <span class="process-track__num">01</span>
+                    <h3>Brief</h3>
+                    <p>Tell us about your project</p>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">02</span>
                     <h3>Design</h3>
-                    <p>Transforming customers' ideas and concepts into reality</p>
-                </a>
-                <a href="services.html#drafting" class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                    </div>
-                    <h3>Drafting</h3>
-                    <p>Professional CAD drafting for customers' designs</p>
-                </a>
-                <a href="services.html#manufacturing" class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                        </svg>
-                    </div>
-                    <h3>Manufacturing</h3>
-                    <p>Complete manufacture of customers' products</p>
-                </a>
-                <a href="services.html#laser-cutting" class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                    </div>
-                    <h3>Laser Cutting</h3>
-                    <p>Precision laser cutting services up to 20mm thickness</p>
-                </a>
-                <a href="services.html#fabrication" class="service-card">
-                    <div class="service-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                        </svg>
-                    </div>
-                    <h3>Sheet Metal Fabrication</h3>
-                    <p>Medium engineering and custom sheet metal work</p>
-                </a>
-            </div>
-            <div class="cta-center">
-                <a href="services.html" class="btn btn-primary">View All Services</a>
-            </div>
+                    <p>We create drawings and plans</p>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">03</span>
+                    <h3>Quote</h3>
+                    <p>Detailed pricing and timeline</p>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">04</span>
+                    <h3>Manufacture</h3>
+                    <p>Precision production in our facility</p>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">05</span>
+                    <h3>Inspect</h3>
+                    <p>Quality control to our standards</p>
+                </li>
+                <li class="process-track__step">
+                    <span class="process-track__num">06</span>
+                    <h3>Deliver</h3>
+                    <p>On time, every time</p>
+                </li>
+            </ol>
         </div>
     </section>
 
-    <!-- Capabilities Section -->
-    <section class="capabilities">
+    <!-- Why Choose Section -->
+    <section class="trust-v2">
         <div class="container">
-            <h2 class="section-title">Our Capabilities</h2>
-            <div class="capabilities-grid">
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
+            <div class="section-header section-header--center">
+                <p class="eyebrow eyebrow--light">Why Choose Rapid Laser</p>
+                <h2 class="section-heading section-heading--light">Trusted by Businesses Across Melbourne</h2>
+            </div>
+            <div class="trust-v2__grid">
+                <div class="trust-v2__item">
+                    <div class="trust-v2__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
                     </div>
-                    <h3>CAD Drafting</h3>
-                    <p>Advanced computer-aided design services</p>
+                    <h3>35+ Years of Experience</h3>
                 </div>
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
+                <div class="trust-v2__item">
+                    <div class="trust-v2__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
                     </div>
-                    <h3>Laser Cutting to 20mm</h3>
-                    <p>Precision cutting for various thicknesses</p>
+                    <h3>Design + Fabrication Under One Roof</h3>
                 </div>
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-                        </svg>
+                <div class="trust-v2__item">
+                    <div class="trust-v2__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
-                    <h3>CNC Folding</h3>
-                    <p>Automated precision folding</p>
+                    <h3>Precision Equipment</h3>
                 </div>
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                        </svg>
+                <div class="trust-v2__item">
+                    <div class="trust-v2__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
-                    <h3>Rolling</h3>
-                    <p>Professional metal rolling services</p>
+                    <h3>Melbourne-Based Production</h3>
                 </div>
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                        </svg>
+                <div class="trust-v2__item">
+                    <div class="trust-v2__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
                     </div>
-                    <h3>Lifting</h3>
-                    <p>Heavy lifting capabilities</p>
+                    <h3>Custom &amp; Production Work</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact CTA Section -->
-    <section class="contact-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Start Your Project?</h2>
-                <p>Contact us today to discuss your laser cutting and fabrication needs</p>
-                <div class="cta-buttons">
-                    <a href="quote.html" class="btn btn-primary">Request a Quote</a>
-                    <a href="contact.html" class="btn btn-secondary">Contact Us</a>
+    <!-- Final CTA -->
+    <section class="cta-v2">
+        <div class="cta-v2__media">
+            <img src="images/fabrication.jpg" alt="Precision manufactured metal components" onerror="this.src='images/custom-parts.jpg'">
+            <div class="cta-v2__overlay"></div>
+        </div>
+        <div class="cta-v2__content">
+            <div class="container">
+                <h2>Have a Project to Manufacture?</h2>
+                <p>Send us your drawings, specifications or idea and we'll discuss the best way to produce it.</p>
+                <div class="cta-v2__actions">
+                    <a href="quote.html" class="btn btn-primary">Request A Quote <span class="btn-arrow" aria-hidden="true">→</span></a>
+                    <a href="contact.html" class="btn btn-outline-light">Contact Us</a>
                 </div>
             </div>
         </div>
+        <p class="cta-v2__script" aria-hidden="true">Quality in every detail</p>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer footer-v2">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <h4>Rapid Machining & Fabrication</h4>
-                    <p>Quality engineering and fabrication since 1986</p>
+                <div class="footer-col footer-col--brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="Rapid Laser" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="logo-text" style="display: none;">
+                            <span class="logo-rapid">RAPID</span>
+                            <span class="logo-laser">LASER</span>
+                        </div>
+                    </a>
+                    <p>Quality engineering and fabrication since 1986.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Our Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="projects.html">Custom Projects</a></li>
                         <li><a href="capabilities.html">Capabilities</a></li>
                     </ul>
                 </div>
@@ -243,13 +412,13 @@
                         <li><a href="services.html#laser-cutting">Laser Cutting</a></li>
                         <li><a href="services.html#fabrication">Sheet Metal Fabrication</a></li>
                         <li><a href="capabilities.html">Materials We Cut</a></li>
-                        <li><a href="quote.html">Request a Quote</a></li>
+                        <li><a href="equipment.html">Equipment</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <p>5 Elsum Ave, Bayswater North<br>Victoria, 3153</p>
-                    <p><strong>Phone:</strong> 03 9729 3344</p>
+                    <p><strong>Phone:</strong> <a href="tel:0397293344">03 9729 3344</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -261,4 +430,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
