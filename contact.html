@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-contact">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -21,7 +21,7 @@
                         <span class="logo-laser">LASER</span>
                     </div>
                 </a>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <button class="mobile-menu-btn" aria-label="Toggle menu" onclick="toggleMobileMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -33,153 +33,261 @@
                     <li><a href="projects.html">Custom Projects</a></li>
                     <li><a href="capabilities.html">Capabilities</a></li>
                     <li><a href="quote.html" class="btn-nav">Request A Quote</a></li>
-                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                    <li><a href="contact.html" class="nav-contact active">Contact Us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
+    <!-- Hero -->
+    <section class="page-hero" aria-label="Contact hero">
+        <div class="page-hero__media">
+            <img src="images/prototypes.jpg" alt="Close-up precision fabricated metal components" onerror="this.src='images/custom-parts.jpg'">
+            <div class="page-hero__overlay"></div>
+        </div>
+        <div class="page-hero__content">
+            <div class="container">
+                <p class="eyebrow eyebrow--light">Contact Us</p>
+                <h1 class="page-hero__title">
+                    Get In Touch.<br>
+                    <span class="text-accent">We're Here to Help.</span>
+                </h1>
+                <p class="page-hero__subtitle">Whether you have a general question, want to discuss a project or need help finding the right service, our team is here to help.</p>
+            </div>
+        </div>
+        <p class="page-hero__script" aria-hidden="true">Talk to the people<br>who make it happen</p>
+    </section>
+
+    <!-- Credibility strip -->
+    <section class="spec-strip contact-cred-strip" aria-label="Contact credentials">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>Get in touch with our team</p>
+            <div class="spec-strip__grid">
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    </div>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Responsive Support</span>
+                        <span class="spec-strip__desc">We're here to help</span>
+                    </div>
+                </div>
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Technical Expertise</span>
+                        <span class="spec-strip__desc">Get the right advice</span>
+                    </div>
+                </div>
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                    </div>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">Real Solutions</span>
+                        <span class="spec-strip__desc">For your unique needs</span>
+                    </div>
+                </div>
+                <div class="spec-strip__item">
+                    <div class="spec-strip__icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 100 3m0-3h.01M17 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 100 3m0-3h.01M12 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 100 3m0-3h.01"/></svg>
+                    </div>
+                    <div class="spec-strip__text">
+                        <span class="spec-strip__label">A Partner You Can Trust</span>
+                        <span class="spec-strip__desc">Building long-term relationships</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
+    <!-- Main Contact Section -->
+    <section class="contact-v2-section" aria-label="Contact details and enquiry form">
         <div class="container">
-            <div class="contact-layout">
-                <div class="contact-info-panel">
-                    <h2>Get In Touch</h2>
-                    <p>Have a question about our services or want to discuss your project? We'd love to hear from you. Contact us using any of the methods below.</p>
+            <div class="contact-v2-layout">
+                <div class="contact-v2-details">
+                    <p class="eyebrow">Our Details</p>
+                    <h2 class="section-heading">Contact Rapid Laser</h2>
+                    <p class="contact-v2-details__intro">We'd love to hear from you. Get in touch using the details below or send us a message and our team will respond as soon as possible.</p>
 
-                    <div class="contact-details">
-                        <div class="contact-detail-item">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                </svg>
-                            </div>
+                    <ul class="contact-v2-details__list">
+                        <li>
+                            <span class="contact-v2-details__icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            </span>
                             <div>
-                                <h3>Phone</h3>
-                                <p><a href="tel:0397293344">03 9729 3344</a></p>
-                                <small>Monday - Friday, 7:00 AM - 5:00 PM</small>
+                                <strong>Phone</strong>
+                                <a href="tel:0397293344">03 9729 3344</a>
                             </div>
-                        </div>
-
-                        <div class="contact-detail-item">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
-                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-v2-details__icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </span>
                             <div>
-                                <h3>Address</h3>
-                                <p>Rapid Machining & Fabrication<br>
-                                5 Elsum Ave, Bayswater North<br>
-                                Victoria, 3153<br>
-                                Australia</p>
+                                <strong>Address</strong>
+                                <span>5 Elsum Ave, Bayswater North<br>Victoria, 3153</span>
                             </div>
-                        </div>
-
-                        <div class="contact-detail-item">
-                            <div class="contact-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                            </div>
+                        </li>
+                        <li>
+                            <span class="contact-v2-details__icon" aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </span>
                             <div>
-                                <h3>Business Hours</h3>
-                                <p>Monday - Friday: 7:00 AM - 5:00 PM<br>
-                                Saturday - Sunday: Closed</p>
+                                <strong>Business Hours</strong>
+                                <span>Monday – Friday: 7:00 AM – 5:00 PM<br>Saturday – Sunday: Closed</span>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
 
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.3067634747486!2d145.27956!3d-37.84444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63e9e4d3b9d41%3A0x5045675218ce6e0!2s5%20Elsum%20Ave%2C%20Bayswater%20North%20VIC%203153!5e0!3m2!1sen!2sau!4v1234567890" 
-                            width="100%" 
-                            height="300" 
-                            style="border:0; border-radius: 12px;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
+                    <figure class="contact-v2-facility">
+                        <img src="images/facility.jpg" alt="Rapid Laser facility in Bayswater North" onerror="this.src='images/laser-cutter.jpg'">
+                    </figure>
                 </div>
 
-                <div class="contact-form-panel">
-                    <h2>Send Us A Message</h2>
-                    <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="contactFirstName">First Name *</label>
-                                <input type="text" id="contactFirstName" name="firstName" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="contactLastName">Last Name *</label>
-                                <input type="text" id="contactLastName" name="lastName" required>
-                            </div>
+                <div class="contact-v2-form-wrap">
+                    <p class="eyebrow">Send Us A Message</p>
+                    <h2 class="section-heading">We're Here to Help</h2>
+                    <p class="contact-v2-form-wrap__intro">Have a question, need advice or want to discuss a project? Send us a message and we'll get back to you shortly.</p>
+
+                    <form class="contact-v2-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label for="contactFirstName">Full Name *</label>
+                            <input type="text" id="contactFirstName" name="firstName" placeholder="Your name" required autocomplete="name">
                         </div>
                         <div class="form-group">
                             <label for="contactEmail">Email Address *</label>
-                            <input type="email" id="contactEmail" name="email" required>
+                            <input type="email" id="contactEmail" name="email" placeholder="you@company.com" required autocomplete="email">
                         </div>
                         <div class="form-group">
                             <label for="contactPhone">Phone Number</label>
-                            <input type="tel" id="contactPhone" name="phone">
+                            <input type="tel" id="contactPhone" name="phone" placeholder="Your phone number" autocomplete="tel">
                         </div>
                         <div class="form-group">
                             <label for="contactSubject">Subject *</label>
-                            <input type="text" id="contactSubject" name="subject" required>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="general">General Enquiry</option>
+                                <option value="service">Service Question</option>
+                                <option value="equipment">Equipment / Capability Question</option>
+                                <option value="existing-project">Existing Project</option>
+                                <option value="facility-visit">Facility / Visit Enquiry</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="contactMessage">Message *</label>
-                            <textarea id="contactMessage" name="message" rows="6" required placeholder="Tell us how we can help you..."></textarea>
+                            <textarea id="contactMessage" name="message" rows="5" required placeholder="Tell us how we can help..."></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn--rect btn-large contact-v2-form__submit">
+                            Send Message
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </button>
+                        <p class="contact-v2-form__privacy">Your information will only be used to respond to your enquiry.</p>
                     </form>
+
+                    <aside class="contact-v2-quote-panel">
+                        <span class="contact-v2-quote-panel__icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        </span>
+                        <div>
+                            <h3>Need a Quote Instead?</h3>
+                            <p>Have drawings, specifications or a manufacturing requirement? Use our dedicated quote form so we can review your project properly.</p>
+                            <a href="quote.html" class="btn btn-primary btn--rect">Request A Quote <span class="btn-arrow" aria-hidden="true">→</span></a>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Additional Info Section -->
-    <section class="additional-info">
+    <!-- Location -->
+    <section class="contact-v2-location" aria-label="Our location">
         <div class="container">
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3>Looking for a Quote?</h3>
-                    <p>For project quotes, please use our dedicated quote request form for faster processing.</p>
-                    <a href="quote.html" class="btn btn-secondary">Request Quote</a>
+            <div class="contact-v2-location__header">
+                <p class="eyebrow">Our Location</p>
+                <h2 class="section-heading">Visit Our Bayswater Facility</h2>
+                <p>Conveniently located in Bayswater North, our facility is equipped to support a wide range of precision manufacturing and fabrication requirements.</p>
+            </div>
+            <div class="contact-v2-location__grid">
+                <div class="contact-v2-location__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3150.3067634747486!2d145.27956!3d-37.84444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63e9e4d3b9d41%3A0x5045675218ce6e0!2s5%20Elsum%20Ave%2C%20Bayswater%20North%20VIC%203153!5e0!3m2!1sen!2sau!4v1234567890"
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Rapid Laser location on Google Maps">
+                    </iframe>
                 </div>
-                <div class="info-card">
-                    <h3>Visit Our Facility</h3>
-                    <p>Interested in seeing our operations? Feel free to schedule a visit to our Bayswater facility.</p>
-                    <a href="tel:0397293344" class="btn btn-secondary">Call to Schedule</a>
+                <div class="contact-v2-location__info">
+                    <div class="contact-v2-location__block">
+                        <h3>Get Directions</h3>
+                        <p>5 Elsum Ave, Bayswater North<br>Victoria, 3153</p>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=5+Elsum+Ave,+Bayswater+North+VIC+3153" class="link-arrow" target="_blank" rel="noopener noreferrer">Open in Google Maps <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="contact-v2-location__block">
+                        <h3>Call Us</h3>
+                        <p><a href="tel:0397293344">03 9729 3344</a></p>
+                        <a href="tel:0397293344" class="link-arrow">Call Now <span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="contact-v2-location__block">
+                        <h3>Business Hours</h3>
+                        <p>Monday – Friday: 7:00 AM – 5:00 PM<br>Saturday – Sunday: Closed</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-v2 cta-v2--page cta-v2--contact">
+        <div class="cta-v2__media">
+            <img src="images/custom-parts.jpg" alt="Precision fabricated metal components" onerror="this.src='images/prototypes.jpg'">
+            <div class="cta-v2__overlay"></div>
+        </div>
+        <div class="cta-v2__content">
+            <div class="container cta-v2__inner">
+                <p class="eyebrow eyebrow--light">Ready to Talk?</p>
+                <h2>Start the Conversation</h2>
+                <p>Whether you need a quick answer or want to discuss a manufacturing project, get in touch with our team.</p>
+                <div class="cta-v2__actions">
+                    <a href="contact.html" class="btn btn-primary btn--rect">Contact Us</a>
+                    <a href="quote.html" class="btn btn-outline-light btn--rect">Request A Quote</a>
+                </div>
+            </div>
+        </div>
+        <div class="cta-v2__script-wrap" aria-hidden="true">
+            <span class="cta-v2__script-line"></span>
+            <p class="cta-v2__script">Custom solutions<br>for real results</p>
+            <span class="cta-v2__script-line"></span>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer footer-v2">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <h4>Rapid Machining & Fabrication</h4>
-                    <p>Quality engineering and fabrication since 1986</p>
+                <div class="footer-col footer-col--brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="images/logo.png" alt="" onerror="this.style.display='none';">
+                        <span class="footer-logo__text">
+                            <span class="logo-rapid">RAPID</span>
+                            <span class="logo-laser">LASER</span>
+                        </span>
+                    </a>
+                    <p>Quality engineering and fabrication since 1986.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Our Services</a></li>
-                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="equipment.html">Equipment</a></li>
+                        <li><a href="projects.html">Custom Projects</a></li>
                         <li><a href="capabilities.html">Capabilities</a></li>
                     </ul>
                 </div>
@@ -195,11 +303,16 @@
                 <div class="footer-col">
                     <h4>Contact</h4>
                     <p>5 Elsum Ave, Bayswater North<br>Victoria, 3153</p>
-                    <p><strong>Phone:</strong> 03 9729 3344</p>
+                    <p><strong>Phone:</strong> <a href="tel:0397293344">03 9729 3344</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; Copyright 2025 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+                <p class="footer-bottom__copy">&copy; Copyright 2025 Chasemore Engineering PTY. LTD. trading as Rapid Machining and Fabrication. All rights reserved.</p>
+                <div class="footer-bottom__legal">
+                    <a href="#">Privacy Policy</a>
+                    <span class="footer-bottom__sep" aria-hidden="true">|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -207,4 +320,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

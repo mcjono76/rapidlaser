@@ -162,19 +162,33 @@ function handleQuoteSubmit(event) {
 
 function handleContactSubmit(event) {
     event.preventDefault();
-    
+
+    const form = event.target;
+    const submitBtn = form.querySelector('[type="submit"]');
+    const defaultBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+    }
+
     // Get form data
-    const formData = new FormData(event.target);
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    
+
     // In a real application, you would send this data to a server
     console.log('Contact Form:', data);
-    
+
     // Show success message
     alert('Thank you for contacting us! We will respond to your message as soon as possible.');
-    
+
     // Reset form
-    event.target.reset();
+    form.reset();
+
+    if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = defaultBtnHtml;
+    }
 }
 
 // ========================================
