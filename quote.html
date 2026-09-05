@@ -69,6 +69,7 @@
                         <p>Provide as much detail as possible and we'll get back to you with a competitive quote and timeframe.</p>
                     </div>
 
+                    <div class="quote-v2-form-card">
                     <form class="quote-v2-form" id="quoteForm" onsubmit="handleQuoteSubmit(event)">
                         <div class="form-row">
                             <div class="form-group">
@@ -92,31 +93,30 @@
                             </div>
                         </div>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="service">Project Type *</label>
-                                <select id="service" name="service" required>
-                                    <option value="">Select project type...</option>
-                                    <option value="laser-cutting">Laser Cutting</option>
-                                    <option value="cnc-folding">CNC Folding</option>
-                                    <option value="fabrication">Sheet Metal Fabrication</option>
-                                    <option value="drafting">CAD &amp; Drafting</option>
-                                    <option value="rolling-forming">Rolling &amp; Forming</option>
-                                    <option value="custom">Custom Manufacturing</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="material">Material(s) *</label>
-                                <select id="material" name="material" required>
-                                    <option value="">Select material...</option>
-                                    <option value="mild-steel">Mild Steel</option>
-                                    <option value="stainless-steel">Stainless Steel</option>
-                                    <option value="aluminum">Aluminium</option>
-                                    <option value="galvanized">Galvanized Steel</option>
-                                    <option value="other">Other / Not Sure</option>
-                                </select>
-                            </div>
+                        <div class="form-group">
+                            <label for="service">Project Type *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a project type</option>
+                                <option value="laser-cutting">Laser Cutting</option>
+                                <option value="cnc-folding">CNC Folding</option>
+                                <option value="fabrication">Sheet Metal Fabrication</option>
+                                <option value="drafting">CAD &amp; Drafting</option>
+                                <option value="rolling-forming">Rolling &amp; Forming</option>
+                                <option value="custom">Custom Manufacturing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="material">Material(s) *</label>
+                            <select id="material" name="material" required>
+                                <option value="">Select material(s)</option>
+                                <option value="mild-steel">Mild Steel</option>
+                                <option value="stainless-steel">Stainless Steel</option>
+                                <option value="aluminum">Aluminium</option>
+                                <option value="galvanized">Galvanized Steel</option>
+                                <option value="other">Other / Not Sure</option>
+                            </select>
                         </div>
 
                         <div class="form-row">
@@ -144,11 +144,11 @@
                                 <svg class="quote-upload__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
                                 </svg>
-                                <p class="quote-upload__text">Drawings, images, PDFs, etc.</p>
+                                <p class="quote-upload__text">Drawings, images, PDFs, etc. (Max 10MB per file)</p>
                                 <label for="files" class="quote-upload__btn">Choose Files</label>
                                 <input type="file" id="files" name="files" multiple accept=".pdf,.dwg,.dxf,.jpg,.jpeg,.png,.step,.stp" class="quote-upload__input">
                             </div>
-                            <small class="quote-upload__hint">Accepted formats: PDF, DWG, DXF, JPG, PNG, STEP (Max 10MB per file)</small>
+                            <small class="quote-upload__hint">Accepted formats: PDF, DWG, DXF, JPG, PNG, STEP</small>
                             <div class="file-list" id="fileList" aria-live="polite"></div>
                         </div>
 
@@ -157,8 +157,12 @@
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
                         </button>
 
-                        <p class="quote-v2-form__privacy">Your information will only be used to respond to your enquiry.</p>
+                        <p class="quote-v2-form__privacy">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                            Your information will only be used to respond to your enquiry.
+                        </p>
                     </form>
+                    </div>
                 </div>
 
                 <aside class="quote-v2-sidebar" aria-label="Why choose Rapid Laser">
@@ -242,53 +246,6 @@
                     </div>
                 </aside>
             </div>
-        </div>
-    </section>
-
-    <!-- Quote Process -->
-    <section class="quote-process" aria-label="Quote process">
-        <div class="container">
-            <div class="quote-process__header">
-                <p class="eyebrow">Our Process</p>
-                <h2 class="section-heading">From Quote to Delivery</h2>
-            </div>
-            <ol class="process-track">
-                <li class="process-track__step">
-                    <span class="process-track__num">01</span>
-                    <div class="process-track__content">
-                        <h3>Submit Enquiry</h3>
-                        <p>Tell us about your project</p>
-                    </div>
-                </li>
-                <li class="process-track__step">
-                    <span class="process-track__num">02</span>
-                    <div class="process-track__content">
-                        <h3>Review &amp; Quote</h3>
-                        <p>We assess your requirements</p>
-                    </div>
-                </li>
-                <li class="process-track__step">
-                    <span class="process-track__num">03</span>
-                    <div class="process-track__content">
-                        <h3>Confirm</h3>
-                        <p>Approve the quote and finalise details</p>
-                    </div>
-                </li>
-                <li class="process-track__step">
-                    <span class="process-track__num">04</span>
-                    <div class="process-track__content">
-                        <h3>Manufacture</h3>
-                        <p>Precision production</p>
-                    </div>
-                </li>
-                <li class="process-track__step">
-                    <span class="process-track__num">05</span>
-                    <div class="process-track__content">
-                        <h3>Deliver</h3>
-                        <p>Your finished project</p>
-                    </div>
-                </li>
-            </ol>
         </div>
     </section>
 

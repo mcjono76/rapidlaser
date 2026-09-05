@@ -1015,24 +1015,6 @@ section {
     background: var(--bg-white);
 }
 
-.capabilities-intro {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 3rem;
-}
-
-.capabilities-intro h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: var(--text-dark);
-}
-
-.capabilities-intro p {
-    font-size: 1.1rem;
-    color: var(--text-light);
-    line-height: 1.8;
-}
-
 .capabilities-list {
     display: flex;
     flex-direction: column;
@@ -4136,16 +4118,14 @@ body.home .navbar {
 /* Capabilities intro */
 .capabilities-intro {
     position: relative;
-    background-color: #f4f6f8;
-    background-image: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 10px,
-        rgba(0, 0, 0, 0.012) 10px,
-        rgba(0, 0, 0, 0.012) 11px
-    );
+    background-color: #ffffff;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px);
+    background-size: 18px 18px;
     padding: var(--section-padding) 0;
     overflow: hidden;
+    text-align: left;
+    max-width: none;
+    margin: 0;
 }
 
 .capabilities-intro .container {
@@ -4155,9 +4135,17 @@ body.home .navbar {
 
 .capabilities-intro__grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 3rem 4rem;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3rem 4.5rem;
     align-items: center;
+}
+
+.capabilities-intro__main {
+    text-align: left;
+}
+
+.capabilities-intro__main .eyebrow {
+    color: var(--primary-color);
 }
 
 .capabilities-intro__main .section-heading {
@@ -4196,7 +4184,6 @@ body.home .navbar {
     height: 48px;
     border-radius: 50%;
     background: rgba(1, 104, 233, 0.1);
-    box-shadow: 0 0 0 5px rgba(1, 104, 233, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4356,19 +4343,31 @@ body.home .navbar {
    ============================================= */
 
 .quote-v2-section {
-    background: var(--bg-white);
+    background: #f9fafb;
     padding: var(--section-padding) 0;
 }
 
 .quote-v2-layout {
     display: grid;
-    grid-template-columns: 1.65fr 1fr;
-    gap: 3rem 3.5rem;
+    grid-template-columns: 1.72fr 0.88fr;
+    gap: 3rem 4rem;
     align-items: start;
 }
 
 .quote-v2-form__header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
+}
+
+.quote-v2-form-card {
+    background: var(--bg-white);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 1.75rem 1.75rem 1.5rem;
+}
+
+.quote-v2-sidebar {
+    position: sticky;
+    top: 6rem;
 }
 
 .quote-v2-form__header .section-heading {
@@ -4415,7 +4414,11 @@ body.home .navbar {
 }
 
 .page-quote .quote-v2-form .form-group {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.125rem;
+}
+
+.page-quote .quote-v2-form .form-group:last-of-type {
+    margin-bottom: 0;
 }
 
 .page-quote .quote-v2-form .form-row {
@@ -4534,11 +4537,22 @@ body.home .navbar {
 }
 
 .quote-v2-form__privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
     margin: 1rem 0 0;
     font-size: 0.75rem;
     color: #9ca3af;
     text-align: center;
     line-height: 1.5;
+}
+
+.quote-v2-form__privacy svg {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    color: #9ca3af;
 }
 
 /* Sidebar */
@@ -4757,10 +4771,11 @@ body.home .navbar {
 @media (max-width: 1100px) {
     .quote-v2-layout {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
     }
 
     .quote-v2-sidebar {
+        position: static;
         order: 2;
     }
 }
@@ -4770,40 +4785,8 @@ body.home .navbar {
         grid-template-columns: 1fr;
     }
 
-    .quote-process .process-track {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .quote-process .process-track::before {
-        display: none;
-    }
-
-    .quote-process .process-track__step {
-        flex-direction: row;
-        align-items: flex-start;
-        text-align: left;
-        gap: 1rem;
-        padding: 0 0 1.5rem;
-    }
-
-    .quote-process .process-track__step:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        left: 19px;
-        top: 40px;
-        bottom: 0;
-        width: 2px;
-        background: rgba(1, 104, 233, 0.22);
-    }
-
-    .quote-process .process-track__step {
-        position: relative;
-    }
-
-    .quote-process .process-track__content {
-        text-align: left;
-        padding-top: 0.15rem;
+    .quote-v2-form-card {
+        padding: 1.375rem 1.25rem 1.25rem;
     }
 }
 
