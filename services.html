@@ -89,7 +89,7 @@
                     </li>
                     <li>
                         <span class="services-intro__icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
                         </span>
                         <div>
                             <strong>Custom &amp; Production</strong>
@@ -105,12 +105,15 @@
     <section class="service-blocks">
         <div class="container">
             <div class="service-blocks__grid">
-                <article class="service-block" id="laser-cutting">
+                <article class="service-block service-block--featured" id="laser-cutting">
                     <div class="service-block__media">
                         <img src="images/lasercutting.jpg" alt="Precision laser cutting with sparks" onerror="this.src='images/laser-cutting.jpg'">
                     </div>
                     <div class="service-block__content">
-                        <span class="service-block__num">01</span>
+                        <div class="service-block__num-row">
+                            <span class="service-block__num">01</span>
+                            <span class="service-block__dash" aria-hidden="true"></span>
+                        </div>
                         <h2>Laser Cutting</h2>
                         <p>Precision laser cutting services for a wide range of materials and thicknesses up to 20mm.</p>
                         <ul class="check-list">
@@ -120,16 +123,19 @@
                             <li>Complex shapes and profiles</li>
                             <li>Fast turnaround times</li>
                         </ul>
-                        <a href="equipment.html" class="link-arrow">Learn More <span aria-hidden="true">→</span></a>
+                        <a href="equipment.html" class="btn btn-primary btn--rect btn--sm">Learn More <span class="btn-arrow" aria-hidden="true">→</span></a>
                     </div>
                 </article>
 
-                <article class="service-block service-block--reverse" id="drafting">
+                <article class="service-block" id="drafting">
                     <div class="service-block__media">
                         <img src="images/cad-station.jpg" alt="CAD drafting workstation with technical drawings" onerror="this.src='images/drafting.jpg'">
                     </div>
                     <div class="service-block__content">
-                        <span class="service-block__num">02</span>
+                        <div class="service-block__num-row">
+                            <span class="service-block__num">02</span>
+                            <span class="service-block__dash" aria-hidden="true"></span>
+                        </div>
                         <h2>CAD &amp; Drafting</h2>
                         <p>Professional 2D and 3D CAD drafting services to turn your ideas into manufacturable designs.</p>
                         <ul class="check-list">
@@ -147,7 +153,10 @@
                         <img src="images/cnc-folder.jpg" alt="CNC press brake folding metal" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=800&h=600&fit=crop'">
                     </div>
                     <div class="service-block__content">
-                        <span class="service-block__num">03</span>
+                        <div class="service-block__num-row">
+                            <span class="service-block__num">03</span>
+                            <span class="service-block__dash" aria-hidden="true"></span>
+                        </div>
                         <h2>CNC Folding</h2>
                         <p>Accurate and consistent folding for complex parts and assemblies.</p>
                         <ul class="check-list">
@@ -160,12 +169,15 @@
                     </div>
                 </article>
 
-                <article class="service-block service-block--reverse" id="fabrication">
+                <article class="service-block" id="fabrication">
                     <div class="service-block__media">
                         <img src="images/fabrication.jpg" alt="Sheet metal fabrication in workshop" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop'">
                     </div>
                     <div class="service-block__content">
-                        <span class="service-block__num">04</span>
+                        <div class="service-block__num-row">
+                            <span class="service-block__num">04</span>
+                            <span class="service-block__dash" aria-hidden="true"></span>
+                        </div>
                         <h2>Sheet Metal Fabrication</h2>
                         <p>Complete fabrication services from small batches to large production runs.</p>
                         <ul class="check-list">
@@ -183,7 +195,10 @@
                         <img src="images/rolling-machine.jpg" alt="Metal rolling and forming equipment" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop'">
                     </div>
                     <div class="service-block__content">
-                        <span class="service-block__num">05</span>
+                        <div class="service-block__num-row">
+                            <span class="service-block__num">05</span>
+                            <span class="service-block__dash" aria-hidden="true"></span>
+                        </div>
                         <h2>Rolling &amp; Forming</h2>
                         <p>Create curved and cylindrical forms with precision.</p>
                         <ul class="check-list">
@@ -196,12 +211,15 @@
                     </div>
                 </article>
 
-                <article class="service-block service-block--reverse" id="lifting">
+                <article class="service-block" id="lifting">
                     <div class="service-block__media">
                         <img src="images/lifting-equipment.jpg" alt="Industrial lifting and material handling" onerror="this.src='https://images.unsplash.com/photo-1581092795462-4c7b1e36f856?w=800&h=600&fit=crop'">
                     </div>
                     <div class="service-block__content">
-                        <span class="service-block__num">06</span>
+                        <div class="service-block__num-row">
+                            <span class="service-block__num">06</span>
+                            <span class="service-block__dash" aria-hidden="true"></span>
+                        </div>
                         <h2>Lifting &amp; Material Handling</h2>
                         <p>Safe handling of large and heavy components throughout the process.</p>
                         <ul class="check-list">
@@ -230,7 +248,7 @@
             <div class="materials-v2__grid">
                 <div class="material-panel">
                     <div class="material-panel__media">
-                        <img src="images/industrial.jpg" alt="Mild steel laser cut components" onerror="this.src='https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop'">
+                        <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=480&h=360&fit=crop" alt="Stacked mild steel plates" loading="lazy">
                     </div>
                     <div class="material-panel__body">
                         <h3>Mild Steel</h3>
@@ -239,7 +257,7 @@
                 </div>
                 <div class="material-panel">
                     <div class="material-panel__media">
-                        <img src="images/custom-parts.jpg" alt="Stainless steel precision parts" onerror="this.src='https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=400&h=300&fit=crop'">
+                        <img src="https://images.unsplash.com/photo-1581092918484-8313e1bf9a67?w=480&h=360&fit=crop" alt="Brushed stainless steel sheets" loading="lazy">
                     </div>
                     <div class="material-panel__body">
                         <h3>Stainless Steel</h3>
@@ -248,7 +266,7 @@
                 </div>
                 <div class="material-panel">
                     <div class="material-panel__media">
-                        <img src="images/prototypes.jpg" alt="Aluminium machined components" onerror="this.src='https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=300&fit=crop'">
+                        <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=480&h=360&fit=crop" alt="Aluminium sheet stock" loading="lazy">
                     </div>
                     <div class="material-panel__body">
                         <h3>Aluminium</h3>
@@ -257,7 +275,7 @@
                 </div>
                 <div class="material-panel">
                     <div class="material-panel__media">
-                        <img src="images/fabrication.jpg" alt="Galvanized steel fabrication" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=400&h=300&fit=crop'">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=480&h=360&fit=crop" alt="Galvanized steel sheet" loading="lazy">
                     </div>
                     <div class="material-panel__body">
                         <h3>Galvanized Steel</h3>
