@@ -173,7 +173,7 @@ const observer = new IntersectionObserver(function(entries) {
 // Observe elements for scroll animations
 document.addEventListener('DOMContentLoaded', function() {
     const animatedElements = document.querySelectorAll(
-        '.photo-card, .service-card, .service-block, .material-panel, .manufacture-v2__item, .trust-v2__item, .process-track__step, .spec-strip__item, .about-v2__grid, .equipment-v2__grid, .project-card'
+        '.photo-card, .service-card, .service-block, .material-panel, .manufacture-v2__item, .trust-v2__item, .process-track__step, .spec-strip__item, .about-v2__grid, .equipment-v2__grid, .project-card, .capability-card'
     );
     
     animatedElements.forEach(el => {
